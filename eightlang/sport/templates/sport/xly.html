@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../../static/css/sport_css/xly.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style type="text/css">
+
+
+    </style>
+    <script>
+        // 		var eur = document.getElementByClassName("eur");
+        // 		var spa = document.getElementByClassName("spa");
+        // 		var ini = document.getElementByClassName("ini");
+
+        function eur() {
+            document.getElementById("spa").style.display = "none";
+            document.getElementById("ini").style.display = "none";
+            document.getElementById("eur").style.display = "inline";
+        }
+
+        function spa() {
+            document.getElementById("eur").style.display = "none";
+            document.getElementById("ini").style.display = "none";
+            document.getElementById("spa").style.display = "inline";
+        }
+
+        function ini() {
+            document.getElementById("spa").style.display = "none";
+            document.getElementById("eur").style.display = "none";
+            document.getElementById("ini").style.display = "inline";
+        }
+    </script>
+
+
+</head>
+<body>
+<!-- 导航栏 -->
+<div class="head_top">
+    <div class="topNacCenter">
+        <a target="_blank"  href="#" class="fix_log"></a>
+        <ul class="top_menu_list1">
+            <li class="f1"><a target="_blank"  href="/">首页</a></li>
+            <li class="f1"><a target="_blank"  href="/person">个人中心</a></li>
+            <li class="f1"><a target="_blank"  href="/abus">关于我们</a></li>
+            <li class="f1"><a target="_blank"  href="/sport/liuyan">留言区</a></li>
+            <li class="f1">{{ nickname }}</li>
+
+        </ul>
+        <ul class="top_menu_list2">
+            <li class="f1"><a target="_blank"  href="/logreg/log">登录</a></li>
+            <li class="f1"><a target="_blank"  href="/logreg/reg">注册</a></li>
+            <li class="f1"><a target="_blank"  href="/quit">注销</a></li>
+        </ul>
+    </div>
+</div>
+<!-- 轮播图 -->
+<div class="banner">
+    <ul class="pic">
+        <li><a target="_blank"  href="javascript:void (0)"><img src="../../../static/img/sports_img/banner1.jpg" width="2000px"
+                                               height="600px" alt="test"></a></li>
+        <li><a target="_blank"  href="javascript:void (0)"><img src="../../../static/img/sports_img/banner2.jpg" width="2000px"
+                                               height="600px" alt="test"></a></li>
+        <li><a target="_blank"  href="javascript:void (0)"><img src="../../../static/img/sports_img/banner3.jpg" width="2000px"
+                                               height="600px" alt="test"></a></li>
+        <li><a target="_blank"  href="javascript:void (0)"><img src="../../../static/img/sports_img/banner4.jpg" width="2000px"
+                                               height="600px" alt="test"></a></li>
+    </ul>
+    <ul class="tab">
+        <li></li>
+        i
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <ul class="btn">
+        <li class="left"><span>&lt;</span></li>
+        <li class="right"><span>&gt;</span></li>
+    </ul>
+    <ul class="ima">
+        <li>曼联众将发推庆祝赢下德比：曼彻斯特是红色的！</li>
+        <li>西班牙人整体战术受限 武磊伯纳乌首秀留遗憾</li>
+        <li>回天乏术！C罗破门难救尤文</li>
+        <li>孙兴慜超级一条龙破门凯恩2射1传，热刺5-0伯恩利</li>
+    </ul>
+</div>
+<!-- 具体显示内容		 -->
+<div class="content">
+    <div class="content_box">
+
+
+        <div class="content_title">
+            <span>体育精选</span>
+            <a target="_blank"  href="#">更多内容→</a>
+        </div>
+
+        <div class="content_text">
+            <ul>
+                <li>
+                    <div class="content_img">
+                        <a target="_blank"  href="#">
+                            <img src="../../../static/img/sports_img/img1.jpg">
+                        </a>
+                    </div>
+                    <div class="content_zhong">
+                        <h3>在一对一防守上，万-比萨卡就是英超最佳</h3>
+                        <p>
+                            万-比萨卡是一个出色的后卫，在一对一上，他就是英超最佳。”“他很有耐心，看看他离对手球员有多近。“斯特林速度奇快，但这并不重要，因为万-比萨卡去防守了，他来搞定。球迷以前认为我很优秀，不过我觉得这家伙比我更厉害。他有那种自信和速度。抓住了时机，那是一次精彩的防守。他的队友知道他是队内最好的后卫</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content_img">
+                        <a target="_blank"  href="#">
+                            <img src="../../../static/img/sports_img/img2.jpg">
+                        </a>
+                    </div>
+                    <div class="content_zhong">
+                        <h3>团结+坚强！尤文客负拉齐奥，C罗赛后发文为球队打气</h3>
+                        <p>在此前结束的一场意甲比赛中，尤文1-3输给了拉齐奥，C罗在比赛中打进一球。赛后，C罗更新了自己的推特，发文为球队打气：“团结在一起，保持坚强，战斗到最后一刻。”</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content_img">
+                        <a target="_blank"  href="#">
+                            <img src="../../../static/img/sports_img/img3.jpg">
+                        </a>
+                    </div>
+                    <div class="content_zhong">
+                        <h3>英媒调查：66%球迷认为孙兴慜长途奔袭进球英超目前最佳</h3>
+                        <p>天空体育就英超迄今为止的最佳进球做了一项调查，结果发现，孙兴慜对伯恩利的长途奔袭进球被66%的球迷评选为本赛季英超目前为止的最佳进球。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content_img">
+                        <a target="_blank"  href="#">
+                            <img src="../../../static/img/sports_img/img4.jpg">
+                        </a>
+                    </div>
+                    <div class="content_zhong">
+                        <h3>英媒调查：国足选拔队在釜山全封闭训练 李铁制定最严训练计划</h3>
+                        <p>
+                            12月7日晚上，国足官方公布了参加东亚杯的23人大名单。在这份名单中，北京国安共有邹德海、于大宝、张稀哲、王子铭4人入选，广州恒大有刘殿座、梅方、韦世豪3人入选，卓尔也成为了国脚大户，共有董春雨、明天、李行3人入选本期国家队。本期之前，李铁一共招入了28名球员，经过几天的训练，刘彬彬、吕文君、于洋、刘云和郑凯木5名球员最终落选，无缘下周开战的东亚杯。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content_img">
+                        <a target="_blank"  href="#">
+                            <img src="../../../static/img/sports_img/img5.jpg">
+                        </a>
+                    </div>
+                    <div class="content_zhong">
+                        <h3>曝穆里尼奥亲自致电鲁能外援费莱尼 希望后者冬窗加盟热刺</h3>
+                        <p>据比利时媒体报道，热刺新帅穆里尼奥近日亲自致电鲁能外援费莱尼，希望后者在冬窗离开山东鲁能，加盟热刺。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content_img">
+                        <a target="_blank"  href="#">
+                            <img src="../../../static/img/sports_img/img6.jpg">
+                        </a>
+                    </div>
+                    <div class="content_zhong">
+                        <h3>专访被问是否执教阿森纳 波切蒂诺憨憨一笑：我下周会回伦敦</h3>
+                        <p>据英国媒体《太阳报》报道，近日在被问到是否会执教阿森纳时，波切蒂诺露出了神秘的微笑，并表示自己下周会回伦敦。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content_img">
+                        <a target="_blank"  href="#">
+                            <img src="../../../static/img/sports_img/img7.jpg">
+                        </a>
+                    </div>
+                    <div class="content_zhong">
+                        <h3>枪手名宿：即便是克洛普和瓜迪奥拉也无法率领阿森纳扭转颓势</h3>
+                        <p>
+                            阿森纳炒掉了埃梅里，但代理主帅永贝里也没能扭转颓势，他带领球队踢了两场只拿到1分，上一轮枪手1-2输给了布莱顿，看起来阿森纳需要再寻新帅了。枪手名宿保罗-默森对这支球队感到绝望，他认为即使克洛普和瓜迪奥拉也无法率领阿森纳扭转颓势。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content_img">
+                        <a target="_blank"  href="#">
+                            <img src="../../../static/img/sports_img/img8.jpg">
+                        </a>
+                    </div>
+                    <div class="content_zhong">
+                        <h3>意媒：伊布的沉默令米兰高层担忧 米兰依旧需要耐心等待</h3>
+                        <p>根据意大利《晚邮报》的报道，伊布的沉默已经让米兰的高层开始担忧了，原本几天之前马尔蒂尼与博班还对签下伊布信心满满，但是现在米兰开始焦虑了。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content_img">
+                        <a target="_blank"  href="#">
+                            <img src="../../../static/img/sports_img/img9.jpg">
+                        </a>
+                    </div>
+                    <div class="content_zhong">
+                        <h3>意媒：卢卡库盼对阵巴萨复仇 这样他将以英雄姿态结束欧冠小组赛</h3>
+                        <p>北京时间12月11日凌晨，国际米兰将在欧冠小组赛中迎来巴塞罗那的挑战，《罗马体育报》把重点聚焦到了卢卡库的身上，这位今夏加盟蓝黑军团的前锋渴望完成对巴萨的复仇。。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content_img">
+                        <a target="_blank"  href="#">
+                            <img src="../../../static/img/sports_img/img10.jpg">
+                        </a>
+                    </div>
+                    <div class="content_zhong">
+                        <h3>卷土重来！皇马盼用J罗贝尔交换博格巴 曼联看不上</h3>
+                        <p>
+                            今年夏天，博格巴就与皇马传出了绯闻。虽然曼联方面态度强硬，但银河战舰并没有放弃这笔交易。根据《太阳报》援引西班牙媒体Eldesmarque的最新报道，为了在明夏签下博格巴，皇马愿意送出J罗和贝尔两名球星作为交换。。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content_top">
+        <div class="team_name">
+            <ul>
+                <li>
+                    <button type="button" class="button eur" onclick="eur()">英超</button>
+                </li>
+                <li>
+                    <button type="button" class="button spa" onclick="spa()">西甲</button>
+                </li>
+                <li>
+                    <button type="button" class="button ini" onclick="ini()">意甲</button>
+                </li>
+            </ul>
+        </div>
+        <div class="top_name">
+            <ul>
+                <li class="button1">球队榜</li>
+                <li class="button1">射手榜</li>
+                <li class="button1">助攻榜</li>
+            </ul>
+        </div>
+        <div class="top_list" id="eur">
+            <div class="top_list1">
+                <ol>
+                    <li>利物浦 46</li>
+                    <li>莱斯特城 38</li>
+                    <li>曼城 32</li>
+                    <li>切尔西 29</li>
+                    <li>曼联 24</li>
+                    <li>狼队 24</li>
+                    <li>热刺 23</li>
+                    <li>谢菲联 22</li>
+                    <li>阿森纳 22</li>
+                    <li>水晶宫 22</li>
+                    <li>纽卡 22</li>
+                    <li>布莱顿 19</li>
+                    <li>伯恩利 18</li>
+                    <li>埃弗顿 17</li>
+                    <li>伯恩茅斯 16</li>
+                    <li>西汉姆联 16</li>
+                    <li>阿斯顿维拉 15</li>
+                    <li>南安普顿 15</li>
+                    <li>诺维奇 11</li>
+                    <li>沃特福德 9</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>瓦尔迪 16</li>
+                    <li>奥巴梅扬 11</li>
+                    <li>亚伯拉罕 11</li>
+                    <li>拉师傅德 10</li>
+                    <li>阿坤罗 9</li>
+                    <li>凯恩 9</li>
+                    <li>马内 9</li>
+                    <li>莱斯 9</li>
+                    <li>斯特林 8</li>
+                    <li>普基 8</li>
+                    <li>萨拉赫 7</li>
+                    <li>伍德 6</li>
+                    <li>莫派 6</li>
+                    <li>巴恩斯 6</li>
+                    <li>威尔逊 6</li>
+                    <li>西门尼斯 6</li>
+                    <li>李察利森 6</li>
+                    <li>B席尔瓦 5</li>
+                    <li>麦迪逊 5</li>
+                    <li>德布劳勒 5</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>德布劳勒 8</li>
+                    <li>孙兴慜 7</li>
+                    <li>阿诺德 6</li>
+                    <li>大卫席尔瓦 6</li>
+                    <li>罗伯逊 5</li>
+                    <li>西门尼斯4</li>
+                    <li>麦克尼尔 4</li>
+                    <li>巴恩斯 4</li>
+                    <li>格里利什 4</li>
+                    <li>艾尔加齐 4</li>
+                    <li>马赫雷斯 4</li>
+                    <li>拉师傅德 4</li>
+                    <li>萨拉赫 4</li>
+                    <li>菲尔米诺 4</li>
+                    <li>布恩迪亚 4</li>
+                    <li>马内 4</li>
+                    <li>丹尼尔詹姆斯 4</li>
+                    <li>穆蒂尼奥 4</li>
+                    <li>B席尔瓦 4</li>
+                    <li>瓦尔迪 3</li>
+                </ol>
+            </div>
+        </div>
+        <div class="top_list" id="spa">
+            <div class="top_list1">
+                <ol>
+                    <li>巴萨 34</li>
+                    <li>皇马 34</li>
+                    <li>塞维利亚 31</li>
+                    <li>皇家社会 27</li>
+                    <li>赫塔菲 27</li>
+                    <li>毕尔巴鄂竞技 26</li>
+                    <li>马德里竞技 26</li>
+                    <li>瓦伦西亚 26</li>
+                    <li>格拉纳达 26</li>
+                    <li>奥萨苏纳 23</li>
+                    <li>皇家贝蒂斯 22</li>
+                    <li>莱万特 20</li>
+                    <li>比利亚雷亚尔 19</li>
+                    <li>巴拉多利德 19</li>
+                    <li>阿拉维斯 18</li>
+                    <li>安瓦尔 15</li>
+                    <li>马略卡 14</li>
+                    <li>萨尔塔 13</li>
+                    <li>莱加内斯 11</li>
+                    <li>西班牙人 9</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>梅西 12</li>
+                    <li>本泽马 11</li>
+                    <li>苏亚雷斯 8</li>
+                    <li>卢卡斯 8</li>
+                    <li>莫隆 8</li>
+                    <li>莫雷诺 8</li>
+                    <li>威廉诺则 8</li>
+                    <li>安赫尔罗德里 7</li>
+                    <li>华金 6</li>
+                    <li>戈麦斯 6</li>
+                    <li>阿维拉 6</li>
+                    <li>马蒂 6</li>
+                    <li>帕雷霍 6</li>
+                    <li>何塞 6</li>
+                    <li>奥坎波斯 4</li>
+                    <li>劳尔·加西亚 5</li>
+                    <li>格列兹曼 5</li>
+                    <li>布季米尔 5</li>
+                    <li>海梅·马塔 4</li>
+                    <li>鲁文·加西亚4</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>罗德里戈 6</li>
+                    <li>本泽马 6</li>
+                    <li>梅西 5</li>
+                    <li>巴内加 5</li>
+                    <li>蒙托罗 4</li>
+                    <li>奥亚萨瓦尔 4</li>
+                    <li>莫德里奇 4</li>
+                    <li>卡索拉 4</li>
+                    <li>厄德高 4</li>
+                    <li>埃莫森 4</li>
+                    <li>雷梅塞罗 4</li>
+                    <li>维克托·迪亚斯 4</li>
+                    <li>卡瓦哈尔 4</li>
+                    <li>奥雷利亚纳 4</li>
+                    <li>卡帕 4</li>
+                    <li>波尔图 4</li>
+                    <li>格列兹曼 4</li>
+                    <li>贾努扎伊 4</li>
+                    <li>纳瓦斯 3</li>
+                    <li>阿莱克斯·比达尔 3</li>
+                </ol>
+            </div>
+        </div>
+        <div class="top_list" id="ini">
+            <div class="top_list1">
+                <ol>
+                    <li>国际米兰 38</li>
+                    <li>尤文图斯 36</li>
+                    <li>拉齐奥 33</li>
+                    <li>卡利亚里 29</li>
+                    <li>罗马 29</li>
+                    <li>亚特兰大 28</li>
+                    <li>那不勒斯 21</li>
+                    <li>帕尔马 21</li>
+                    <li>都灵 20</li>
+                    <li>AC米兰 20</li>
+                    <li>维罗纳 18</li>
+                    <li>博洛尼亚 16</li>
+                    <li>佛罗伦萨 16</li>
+                    <li>萨索洛 15</li>
+                    <li>莱切 15</li>
+                    <li>乌迪内斯 15</li>
+                    <li>桑普多利亚 12</li>
+                    <li>热那亚 11</li>
+                    <li>布雷西亚 10</li>
+                    <li>斯帕尔 9</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>因莫比莱 17</li>
+                    <li>卢卡库 10</li>
+                    <li>若昂·佩德罗 10</li>
+                    <li>穆里尔 9</li>
+                    <li>劳塔罗·马丁内斯 8</li>
+                    <li>贝拉尔迪 8</li>
+                    <li>C·罗纳尔多 7</li>
+                    <li>卡普托 7</li>
+                    <li>贝洛蒂 7</li>
+                    <li>杜万·萨帕塔 6</li>
+                    <li>华金·科雷亚 6</li>
+                    <li>哲科 6</li>
+                    <li>伊利契奇 5</li>
+                    <li>米利克 5</li>
+                    <li>夸姆 5</li>
+                    <li>科内柳斯 5</li>
+                    <li>曼科苏 5</li>
+                    <li>戈森斯 4</li>
+                    <li>戈麦斯 4</li>
+                    <li>默滕斯 4</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>阿尔韦 11</li>
+                    <li>佩莱格里 6</li>
+                    <li>因莫比莱 5</li>
+                    <li>戈麦斯 5</li>
+                    <li>库鲁塞夫斯基 5</li>
+                    <li>纳因格兰 4</li>
+                    <li>吉里奥尼 5</li>
+                    <li>邓肯 5</li>
+                    <li>奇加里尼 4</li>
+                    <li>本坦库尔 4</li>
+                    <li>拉斐尔 4</li>
+                    <li>奥尔索利尼 4</li>
+                    <li>因西涅 4</li>
+                    <li>卡普托 4</li>
+                    <li>卡列洪 4</li>
+                    <li>萨维奇 4</li>
+                    <li>哈特鲍尔 3</li>
+                    <li>佩莱格里尼 3</li>
+                    <li>布罗佐维奇 3</li>
+                    <li>基耶萨 3</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- 轮播图jquery -->
+<script>
+    //获取图片
+    var pic = $(".banner .pic li");
+    //获取小圆圈
+    var tab = $(".banner .tab li");
+    //获取箭头
+    var btn = $(".banner .btn li");
+    //获取文字
+    var ima = $(".banner .ima li");
+    //获取图片长度
+    var len = pic.length;
+    var first = 0;
+    var timer;
+    var imaLen = ima.length;
+
+    //初始化
+    tab.eq(0).addClass('on');
+    tab.eq(0).addClass('on');
+
+
+    //小圆圈区域
+    tab.click(function () {
+        var x = $(this).index();
+        if (x != first) {
+            change(x)
+        }
+    });
+    //箭头区域
+    btn.click(function () {
+        var x = first;
+        if ($(this).index()) {
+            x++;
+            x %= len;
+
+        } else {
+            x--;
+            if (x < 0) {
+                x = len - 1;
+            }
+        }
+        change(x)
+    });
+    //文字区域
+
+
+    //自动轮播
+    $(".banner").hover(function () {
+        clearInterval(timer)
+    }, auto);
+
+    function auto() {
+        timer = setInterval(function () {
+            var x = first;
+            x++;
+            x %= len;
+            change(x);
+        }, 3000)
+    }
+
+    auto();
+
+    //变化函数
+    function change(i) {
+        tab.eq(first).removeClass('on');
+        pic.eq(first).fadeOut(2000);
+        ima.eq(first).fadeOut(2000);
+        first = i;
+        tab.eq(first).addClass('on');
+        pic.eq(first).fadeIn(2000);
+        ima.eq(first).fadeIn(2000);
+    }
+</script>
+</body>
+</html>

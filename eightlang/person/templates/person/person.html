@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ nickname }}的首页</title>
+</head>
+<style>
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .head_top a {
+
+        color: #cccccc;
+    }
+
+    body {
+        font-size: 14px;
+        background-color: #dddddd;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .head_top {
+        width: 100%;
+        height: 80px;
+        padding-top: 10px;
+        background-color: #949494;
+
+    }
+
+    .topNacCenter {
+        width: 1680px;
+        height: 80px;
+        margin: auto;
+    }
+
+    .fix_log {
+        float: left;
+        margin-top: 16px;
+        height: 30px;
+        display: inline-block;
+        width: 150px;
+        background: url(../../../static/img/index_img/8ightLang.png) no-repeat center / auto 100%;
+    }
+
+    .top_menu_list1 {
+        float: left;
+        height: 30px;
+        margin-left: 80px;
+        margin-top: 16px;
+        padding: 0;
+    }
+
+    .top_menu_list2 {
+        float: right;
+        padding: 0;
+        margin-top: 16px;
+
+    }
+
+    .f1 {
+        font-size: 18px;
+        float: left;
+        padding: 0 20px;
+
+
+    }
+
+    .f1 #f2:hover {
+        font-size: 25px;
+        color: #FDE8F8;
+    }
+
+    #total {
+        margin: 0;
+        padding: 0;
+    }
+
+    /*---底部栏---*/
+    .bottom {
+        position: absolute;
+        margin-top: 100px;
+        bottom: 0;
+        width: 100%;
+        height: 25px;
+        text-align: center;
+        color: #949494;
+        padding: 30px 0;
+        z-index: 1;
+    }
+
+    .bottom p {
+        font-size: 18px;
+    }
+
+
+    /*{#--- 推荐栏格式 ---#}*/
+    .you_like {
+        overflow: hidden;
+    }
+
+    .you_like a {
+        color: black;
+    }
+
+    .you_like #guess_like {
+        color: #555;
+        font-size: 29px;
+        font-weight: 600;
+        margin-left: 340px;
+    }
+
+    #guess_like1:hover {
+        font-size: 35px;
+        color: whitesmoke;
+    }
+
+    .you_like img {
+        width: 160px;
+        height: 100px;
+    }
+
+    .you_like #like_img span {
+        position: relative;
+        float: right;
+        padding-top: 12%;
+        color: gray;
+    }
+
+    .you_like #like_img {
+        float: left;
+    }
+
+    .you_like #like_img img:hover {
+        opacity: 0.7;
+    }
+
+    .you_like #like_img hr {
+        width: 700px;
+        height: 2px;
+        color:#444444;
+        opacity: 0.7;
+    }
+
+    .you_like #like_img {
+        margin-top: 50px;
+        margin-left: 30%;
+    }
+
+
+</style>
+
+
+<body id="total">
+<!-- 导航栏 -->
+<div class="head_top">
+    <div class="topNacCenter">
+        <a target="_blank"  href="#" class="fix_log"></a>
+        <ul class="top_menu_list1">
+            <li class="f1"><a target="_blank"  id="f2" href="/">首页</a></li>
+            <li class="f1"><a target="_blank"  id='f2' href="/person/setting">设置</a></li>
+            <li class="f1"><a target="_blank"  id='f2' href="/abus">关于我们</a></li>
+            <li class="f1" style="color: #cccccc">{{ nickname }}</li>
+        </ul>
+        <ul class="top_menu_list2">
+            <li class="f1"><a target="_blank"  id='f2' href="/quit">注销</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- 推荐栏-->
+
+<div class="you_like">
+    <div id="guess_like">
+        <span id="guess_like1">猜你喜欢:</span>
+    </div>
+
+    <div id="like_img">
+        <div>
+            <a target="_blank"  href="{{ hobby1 }}"><img src="../../../static/img/by_img1.jpg" alt="">
+            </a>
+            <span>{{ title1 }}</span>
+        </div>
+        <hr>
+
+
+        <div>
+            <a target="_blank"  href="{{ hobby2 }}"><img src="../../../static/img/by_img2.jpg" alt="">
+                <span>{{ title2 }}</span>
+            </a>
+
+        </div>
+        <hr>
+
+        <div>
+            <a target="_blank"  href="{{ hobby3 }}"><img src="../../../static/img/by_img3.jpg" alt="">
+                <span>{{ title3 }}</span>
+            </a>
+
+        </div>
+        <hr>
+
+    </div>
+
+</div>
+
+<div class="bottom">
+    <hr>
+    <p>
+        &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+    </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浪小说</title>
+    <link rel="stylesheet" href="../../../static/css/bookweb_css/blog.css">
+    <script src="../../../static/js/bookweb_js/jquery.min.js"></script>
+    <script src="../../../static/js/bookweb_js/scrollReveal.js"></script>
+    <script src="../../../static/js/bookweb_js/index.js"></script>
+    <style>
+        .cctip a:hover {
+            color: darkred;
+        }
+
+        .cctip a {
+            color: black;
+            font-size: 30px;
+        }
+
+        #layer3 div {
+            background-color: white;
+        }
+
+        #layer3 ol {
+            padding-left: 100px;
+
+        }
+
+        #layer4 .lright #a1, #a2, #a3 {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<!--    嵌入导航栏模板-->
+{% include 'bookweb/header.html' %}
+<div id="layer1">
+    <div class="lleft">
+        <span id="imgleft">&lsaquo;</span>
+        <img width="752" height="452" src="../../../static/img/bookweb_img/2/fm.jpg" alt="">
+        <span id="imgright">&rsaquo;</span>
+        <p>最强小说</p>
+    </div>
+    <div class="lright">
+        <div class="box">
+            <div class="title">小说</div>
+            <img src='../../../static/img/bookweb_img/20/fm.jpg' width="366" height="216" alt="">
+            <p>好书</p>
+        </div>
+        <div class="box">
+            <div class="title">小说</div>
+            <img src='../../../static/img/bookweb_img/11/fm.jpg' width="366" height="216" alt="">
+            <p>好书</p>
+        </div>
+    </div>
+</div>
+<div id="layer2">
+    <div class="cleft">
+        <div class="ccon">
+            <div class="cctip"><a target="_blank"  target="_blank"  href="/bookstore/book_detail?name=全能高武">全能高武</a></div>
+            <div class="ccframe">
+                <div>
+                    <img src='../../../static/img/bookweb_img/14/fm.jpg' width="300" alt="">
+                </div>
+                <div class="ccright">
+                    <p>地窟入侵，武道崛起。 小人物也有大情怀，为生存而战，为守护而战。 且看小人物方平，一步步崛起，拯救（忽悠）全世界的故事！</p>
+                    <div class="info">{{qqgw_book}}人已收藏</div>
+                </div>
+            </div>
+        </div>
+        <div class="cleft">
+            <div class="ccon">
+                <div class="cctip"><a target="_blank"  target="_blank"  href="/bookstore/book_detail?name=大国-智能制造">大国-智能制造</a></div>
+                <div class="ccframe">
+                    <div>
+                        <img src='../../../static/img/bookweb_img/13/fm.jpg' width="300" alt="">
+                    </div>
+                    <div class="ccright">
+                        <p>机电工程师许振鸣重生1994年，没有系统，没有宝典。他从一家小型机加工车间做起，创造了一个智能装备制造的帝国。
+                            一日，外国人发函来问：贵司能把我们订购AGV机器人的订单提前么？
+                            许振鸣：“德国人的订单安排三年后，日本人的订单安排五年后！谁敢盗用我们的专利，用法律武器让他们闭嘴！”
+                            媒体问：“许总，为何你们公司蓝领工人的工资这么高？”
+                            许振鸣：“我就是蓝领工人的代表！蓝领工人创造真实的社会财富，应该拿高薪！”
+                            这是一个小人物创业的故事。</p>
+                        <div class="info">{{dgzz_book}}人已收藏</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cleft">
+            <div class="ccon">
+                <div class="cctip"><a target="_blank"  target="_blank"  href="/bookstore/book_detail?name=牧神记">牧神记</a></div>
+                <div class="ccframe">
+                    <div>
+                        <img src='../../../static/img/bookweb_img/12/fm.jpg' width="300" alt="">
+                    </div>
+                    <div class="ccright">
+                        <p>大墟的祖训说，天黑，别出门。
+                            　　大墟残老村的老弱病残们从江边捡到了一个婴儿，取名秦牧，含辛茹苦将他养大。这一天夜幕降临，黑暗笼罩大墟，秦牧走出了家门……
+                            　　做个春风中荡漾的反派吧！
+                            　　瞎子对他说。
+                            　　秦牧的反派之路，正在崛起！！</p>
+                        <div class="info">{{msj_book}}人已收藏</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cright">
+        <h3>特别推荐</h3>
+        <div class="line"></div>
+        <div>
+            <img src='../../../static/img/bookweb_img/13/fm.jpg' width="300" alt="">
+        </div>
+        <div>
+            <img src='../../../static/img/bookweb_img/17/fm.jpg' width="300" alt="">
+        </div>
+        <div>
+            <img src='../../../static/img/bookweb_img/11/fm.jpg' width="300" alt="">
+        </div>
+    </div>
+</div>
+
+<div id="layer3">
+    <div id="rank1">
+        <h1>收藏榜</h1>
+        <div class="line1"></div>
+        <ol>
+            {% for book in sc_rank%}
+            <li><a target="_blank"  target="_blank"  id='shoucang' href="/bookstore/book_detail?name={{ book.name }}">{{book.name}}</a></li>
+            {% endfor%}
+        </ol>
+    </div>
+    <div id="rank2">
+        <h1>阅读榜</h1>
+        <div class="line1"></div>
+        <ol>
+            {% for book in read_rank%}
+            <li><a target="_blank"  target="_blank"  id="yuedu" href="/bookstore/book_detail?name={{ book.name }}">{{book.name}}</a></li>
+            {% endfor%}
+        </ol>
+    </div>
+    <div id="rank3">
+        <h1>新书榜</h1>
+        <div class="line1"></div>
+        <ol>
+            {% for book in time_rank%}
+            <li><a target="_blank"  target="_blank"  id="xinshu" href="/bookstore/book_detail?name={{ book.name }}">{{book.name}}</a></li>
+            {% endfor%}
+        </ol>
+    </div>
+</div>
+
+<div id="layer4">
+
+    <div class="lright">
+        <div id="author_desc">
+            <div id="a1">
+                <img src="../../../static/img/bookweb_img/beijing.jpg" alt="">
+                <div id="a11">
+                    <h3><a target="_blank"  target="_blank"  href="/bookstore/author_detail?name={{ author1_name }}">{{ author1_name }}</a></h3>
+                    <br>
+                    <ul>
+                        <li>代表作:{{ author1_book }}</li>
+                        <br>
+                        <li id="li1">简介:{{ author1_content }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="a2">
+                <img src="../../../static/img/bookweb_img/beijing.jpg" alt="">
+                <div id="a21">
+                    <h3><a target="_blank"  target="_blank"  href="/bookstore/author_detail?name={{ author2_name }}">{{ author2_name }}</a></h3>
+                    <br>
+                    <ul>
+                        <li>代表作:{{ author2_book }}</li>
+                        <br>
+                        <li id="li2">简介:{{ author2_content }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="a3">
+                <img src="../../../static/img/bookweb_img/beijing.jpg" alt="">
+                <div id="a31">
+                    <h3><a target="_blank"  target="_blank"  href="/bookstore/author_detail?name={{ author3_name }}">{{ author3_name }}</a></h3>
+                    <br>
+                    <ul>
+                        <li>代表作:{{ author3_book }}</li>
+                        <br>
+                        <li id="li3">简介:{{ author3_content }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'bookweb/bottom.html' %}
+<script src="../../../static/js/bookweb_js/index.js"></script>
+<script>
+    //调用获取焦点的元素
+    getFocus($('#l1 a'))
+
+</script>
+</body>
+</html>

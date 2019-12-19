@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../../../static/css/index_css/index.css" type="text/css">
+</head>
+<body>
+
+<div class="top">
+    <div id="sign">
+        <img src="../../../static/img/index_img/8ightLang.png" alt="" style="background-size: 20%">
+    </div>
+    <b id="welcome" style="color: #212121">欢迎来到八浪俱乐部</b>
+
+    <div id="logging">
+        <h4>
+            <a target="_blank"  id='q1' href="/logreg/log">登录</a>
+            <a target="_blank"  id='q1' href="/logreg/log">注册</a>
+        </h4>
+    </div>
+</div>
+
+
+<div class="display">
+    <div id="ds_construction">
+
+
+        <div id="index_music">
+            <div id="index_book">
+                <a target="_blank"  href="/bookstore">
+                    <img src="../../../static/img/index_img/Books.jpeg" alt="" id="Books"
+                         onmouseover="this.src='../../../static/img/index_img/wenzi_tushu.png'"
+                         onmouseout="this.src='../../../static/img/index_img/Books.jpeg'">
+                </a>
+                <span>图书社区</span>
+            </div>
+
+            <hr>
+            <div id="index_food">
+                <a target="_blank"  href="/food">
+
+                    <img src="../../../static/img/index_img/delicious.png" alt="" id="Food"
+                         onmouseover="this.src='../../../static/img/index_img/wenzi_meishi.png'"
+                         onmouseout="this.src='../../../static/img/index_img/delicious.png'">
+                </a>
+                <span>美食社区</span>
+            </div>
+            <hr>
+            <a target="_blank"  href="/music">
+
+                <img src="../../../static/img/index_img/yinyue.jpeg" alt="" id="Music"
+                     onmouseover="this.src='../../../static/img/index_img/wenzi_yinyue.png'"
+                     onmouseout="this.src='../../../static/img/index_img/yinyue.jpeg'">
+            </a>
+            <span>音乐社区</span>
+
+        </div>
+        <hr>
+        <div id="index_movie">
+            <a target="_blank"  href="/movie">
+                <img src="../../../static/img/index_img/Tv.png" alt="" id="TV"
+                     onmouseover="this.src='../../../static/img/index_img/wenzi_TV.png'"
+                     onmouseout="this.src='../../../static/img/index_img/Tv.png'">
+            </a>
+            <span>影视社区</span>
+        </div>
+        <hr>
+        <div id="index_car">
+            <a target="_blank"  href="/car">
+
+                <img src="../../../static/img/index_img/Car.jpg" alt="" id="Car"
+                     onmouseover="this.src='../../../static/img/index_img/wenzi_qiche.png'"
+                     onmouseout="this.src='../../../static/img/index_img/Car.jpg'">
+            </a>
+            <span>汽车社区</span>
+        </div>
+        <hr>
+
+        <div id="index_sport">
+            <a target="_blank"  href="/sport">
+                <img src="../../../static/img/index_img/Gym.png" alt="" id="Gym"
+                     onmouseover="this.src='../../../static/img/index_img/wenzi_tiyu.png'"
+                     onmouseout="this.src='../../../static/img/index_img/Gym.png'">
+            </a>
+            <span>体育社区</span>
+        </div>
+        <hr>
+
+
+    </div>
+</div>
+
+
+<div class="content">
+    <div id="today" class="clear">
+        <h1>今日推荐(猜您喜欢):</h1>
+        <div id="nice">
+            <div id="good1">
+                <button>
+                    <a target="_blank"  href="{{ target_url.1 }}">
+                        <div>
+                            <img src="../../../static/img/index_img/wenhao_img.png" alt="">
+                        </div>
+                    </a>
+                </button>
+                <button>
+                    <a target="_blank"  href="{{ target_url.0 }}">
+                        <div>
+                            <img src="../../../static/img/index_img/wenhao_img2.png" alt="">
+                        </div>
+                    </a>
+                </button>
+                <button>
+                    <a target="_blank"  href="{{ target_url.2 }}">
+                        <div>
+                            <img src="../../../static/img/index_img/wenhao_img3.png" alt="">
+                        </div>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bottom">
+    <hr>
+    <p>
+        &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+    </p>
+</div>
+
+</body>
+</html>

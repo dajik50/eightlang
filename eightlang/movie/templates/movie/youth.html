@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>青春</title>
+
+    <style type="text/css">
+        .total {
+            background: url("../../../static/img/movie_img/beijing1.jpg");
+            background-size: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        body {
+            font: 12px/180% "宋体", Arial, Helvetica, sans-serif;
+        }
+
+        .demopage {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        /* item */
+        .item {
+            width: 370px;
+            height: 220px;
+            border: 2px solid #000;
+            margin: 5px 5px 5px 0;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+
+        .item .caption {
+            width: 370px;
+            height: 220px;
+            background: url(../../../static/img/movie_img/5.jpg);
+            _background: #000000;
+            color: black;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            display: none;
+            opacity: 0.7;
+        }
+
+        .item .caption a {
+            text-decoration: none;
+            color: #0cc7dd;
+            font-size: 14px;
+            padding: 5px;
+            display: block;
+        }
+
+        .item .caption p a {
+            padding: 5px;
+            margin: 0;
+            font-size: 12px;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        .item img {
+            border: 0;
+            position: absolute;
+            width: 100%;
+            height: 220px;
+        }
+
+        .movie1 {
+            float: left;
+            margin-left: 200px;
+        }
+
+        .top {
+            height: 50px;
+            width: 100%;
+            top: 10px;
+            background: #727272;
+        }
+
+        .top li {
+            float: left;
+            padding-top: 12px;
+        }
+
+        .top .top2 {
+            position: relative;
+            padding-left: 90%;
+        }
+
+        .top .top1 li {
+            margin-right: 50px;
+        }
+
+        .top .top2 li {
+            margin-right: 20px;
+        }
+
+        .top li a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .top li a:hover {
+            background-color: blue;
+        }
+
+        #footer {
+            width: 100%;
+            background-color: #555;
+            color: #f1f1f1;
+            margin-top: 881px;
+        }
+
+        #footer p {
+            text-align: center;
+            width: 1140px;
+            margin: 0 auto;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        #footer p a:hover {
+            background-color: lemonchiffon;
+        }
+                /*---底部栏---*/
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            color: #cccccc;
+            padding: 30px 0;
+            z-index: 1;
+        }
+
+        .bottom p {
+            font-size: 18px;
+        }
+    </style>
+    <script type="text/javascript" src="../../../static/js/movie_js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //移动像素的图像
+            var move = -15;
+            //缩放比例，1.2 =120％
+            var zoom = 1.2;
+            //在对这些缩略图的鼠标滑过事件
+            $('.item').hover(function () {
+                //根据缩放百分比设置宽度和高度
+                width = $('.item').width() * zoom;
+                height = $('.item').height() * zoom;
+                //移动和缩放图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': width,
+                    'height': height,
+                    'top': move,
+                    'left': move
+                }, {duration: 200});
+                //显示标题
+                $(this).find('div.caption').stop(false, true).fadeIn(200);
+            }, function () {
+                //复位图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': $('.item').width(),
+                    'height': $('.item').height(),
+                    'top': '0',
+                    'left': '0'
+                }, {duration: 100});
+                //隐藏标题
+                $(this).find('div.caption').stop(false, true).fadeOut(200);
+            });
+        });
+    </script>
+
+
+</head>
+<body class="total">
+<div class="top">
+       <ul class="top1">
+        <li><a target="_blank"  href="/">首页</a></li>
+        <li><a target="_blank"  href="/movie">影视首页</a></li>
+        <li><a target="_blank"  href="/person">个人中心</a></li>
+           <li><a target="_blank"  href="/abus">关于我们</a></li>
+           <li><a target="_blank"  href="/person">{{nickname}}</a></li>
+    </ul>
+    <ul class="top2">
+        <li><a target="_blank"  href="/logreg/log">登录</a></li>
+        <li><a target="_blank"  href="/logreg/reg">注册</a></li>
+        <li><a target="_blank"  href="/quit">注销</a></li>
+    </ul>
+</div>
+<div class="demopage">
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/tiancai.jpg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《天才少女》</a>
+                <p>
+                    该片讲述了一个天才小女孩在被发现数学天赋后，舅舅和外祖母围绕孩子的教育抚养问题产生分歧的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/kuaiba.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《快把我哥带走》</a>
+                <p>
+                    是由万达影视传媒有限公司出品的喜剧片，由郑芬芬执导，张子枫、彭昱畅、赵今麦、孙泽源、方翔锐、刘冠毅等主演。
+                    该片改编自漫画家幽·灵姐妹的同名漫画，讲述了一对日常互怼的兄妹时分和时秒的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/guochun.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《过春天》</a>
+                <p>
+                    该片讲述了十六岁少女佩佩为完成和闺蜜一起去日本看雪的约定，从而冒险走上水客道路的独特经历。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/ruguowo.jpg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《如果我们是季节》</a>
+                <p>
+                    由蔡秀彬、张东尹、振永主演的KBS独幕剧《如果我们是季节》，讲述纯粹又青涩时期的青春爱情故事。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/yangguang.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《阳光姐妹淘》</a>
+                <p>
+                    故事采用了现实和回忆交错的结构方式，即在展示“过去”的同时也展现了“现代”。该片讲述的是曾经是中学“七公主”sunny小团体成员，
+                    25年后为人妇为人母时再次重逢相聚，寻找属于那个时代的青春记忆的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/woxinque.jpg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《我心雀跃》</a>
+                <p>
+                    讲述了在1997年的夏天，正值青春萌动的刘唯唯暗恋上了高冷寡言的美术老师邹野，并展开了一段独属于少女纯情“初恋”的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/shaonianshidai.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《少年时代》</a>
+                <p>
+                    影片历时12年拍摄，讲述一个男孩从6岁到18岁的成长历程，及其父母亲各个方面的变化。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/chaowo.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《朝我心脏开枪》</a>
+                <p>
+                    是该片改编自作家郑柚井的同名小说，讲述了被家人强制送往精神病院承民与因妈妈去世而得精神分裂症的秀明企图飞越疯人院的故事。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/chunshang.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《唇上之歌》</a>
+                <p>
+                    该片根据日本混血歌手安吉拉·亚纪的名曲《写信~拜启 给十五岁的你~》为轴衍生，讲述了天才美女钢琴家柏木由利回到故乡长崎县五
+                    岛列岛的中学当起了临时老师，为了让学校的合唱部参加音乐会演，柏木向学生们提出“写一封信给15年后的自己
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/huidao.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《回到被爱的每一天》</a>
+                <p>
+                    影片讲述了一个双城的故事，从繁华热闹的北京，到悠闲宁静的都江堰，围绕着艾玲和姜和发生了一段刻骨铭心的心路历程。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/qiguaide.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《奇怪的她》</a>
+                <p>
+                    《奇怪的她》是由黄东赫执导的韩国喜剧电影，讲述了70多岁的老奶奶突然变成了20多岁的花季女子的奇幻故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/sansha.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《三傻大闹宝莱坞》</a>
+                <p>
+                    影片采用插叙的手法，讲述了三位主人公法罕、拉加与兰彻间的大学故事。兰彻是一个与众不同的大学生，公然顶撞院长，并质疑
+                    他的教学方法，用智慧打破学院墨守成规的传统教育观念。
+                </p>
+            </div>
+        </div>
+    </div>
+
+       <div class="bottom">
+        <p>
+            &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+        </p>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<div id="nav">
+    <div class="con">
+        <div class="log" style="padding-left: 10px;">浪小说</div>
+        <ul>
+            <li id="l0"><a target="_blank"  href="/">返回主页</a></li>
+            <li id="l1"><a target="_blank"  href="/bookstore">图书首页</a></li>
+            <li id="l2"><a target="_blank"  href="/bookstore/lists">小说分类</a>
+                <ul id="sub_nav">
+                    <li><a target="_blank"  href="/bookstore/love">言情</a></li>
+                    <li><a target="_blank"  href="/bookstore/elfland">修仙</a></li>
+                    <li><a target="_blank"  href="/bookstore/city">都市</a></li>
+                    <li><a target="_blank"  href="/bookstore/scifi">科幻</a></li>
+                </ul>
+            </li>
+            <li id="l3"><a target="_blank"  href="/person">个人中心</a></li>
+            <li id="l5"><a target="_blank"  href="/abus">关于我们</a></li>
+            <li id="l4"><a target="_blank"  href="/bookstore/liuyan">留言区</a></li>
+            <li id="zwf" style="width: 160px">{{ nickname }}</li>
+            <li id="ss">
+                <form action="/bookstore/book_detail?name={{a}}">
+                    {% csrf_token %}
+                    <input type="search" placeholder="输入书名" name="name">
+                    <button type="submit">搜索</button>
+                </form>
+            </li>
+        </ul>
+        <div class="act"><a target="_blank"  href="/logreg/log">登录</a><a target="_blank"  href="/logreg/reg">注册</a><a target="_blank"  href="/quit">注销</a></div>
+    </div>
+</div>

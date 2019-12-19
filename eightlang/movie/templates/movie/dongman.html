@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动漫</title>
+
+    <style type="text/css">
+        .total {
+            background: url("../../../static/img/movie_img/beijing1.jpg");
+            background-size: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        body {
+            font: 12px/180% "宋体", Arial, Helvetica, sans-serif;
+        }
+
+        .demopage {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        /* item */
+        .item {
+            width: 370px;
+            height: 220px;
+            border: 2px solid #000;
+            margin: 5px 5px 5px 0;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+
+        .item .caption {
+            width: 370px;
+            height: 220px;
+            background: url(../../../static/img/movie_img/5.jpg);
+            _background: #000000;
+            color: black;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            display: none;
+            opacity: 0.7;
+        }
+
+        .item .caption a {
+            text-decoration: none;
+            color: #0cc7dd;
+            font-size: 14px;
+            padding: 5px;
+            display: block;
+        }
+
+        .item .caption p a {
+            padding: 5px;
+            margin: 0;
+            font-size: 12px;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        .item img {
+            border: 0;
+            position: absolute;
+            width: 100%;
+            height: 220px;
+        }
+
+        .movie1 {
+            float: left;
+            margin-left: 200px;
+        }
+
+        .top {
+            height: 50px;
+            width: 100%;
+            top: 10px;
+            background: #727272;
+        }
+
+        .top li {
+            float: left;
+            padding-top: 12px;
+        }
+
+        .top .top2 {
+            position: relative;
+            padding-left: 90%;
+        }
+
+        .top .top1 li {
+            margin-right: 50px;
+        }
+
+        .top .top2 li {
+            margin-right: 20px;
+        }
+
+        .top li a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .top li a:hover {
+            background-color: blue;
+        }
+
+        #footer {
+            width: 100%;
+            background-color: #555;
+            color: #f1f1f1;
+            margin-top: 881px;
+        }
+
+        #footer p {
+            text-align: center;
+            width: 1140px;
+            margin: 0 auto;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        #footer p a:hover {
+            background-color: lemonchiffon;
+        }
+
+        /*---底部栏---*/
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            color: #cccccc;
+            padding: 30px 0;
+            z-index: 1;
+        }
+
+        .bottom p {
+            font-size: 18px;
+        }
+    </style>
+    <script type="text/javascript" src="../../../static/js/movie_js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //移动像素的图像
+            var move = -15;
+            //缩放比例，1.2 =120％
+            var zoom = 1.2;
+            //在对这些缩略图的鼠标滑过事件
+            $('.item').hover(function () {
+                //根据缩放百分比设置宽度和高度
+                width = $('.item').width() * zoom;
+                height = $('.item').height() * zoom;
+                //移动和缩放图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': width,
+                    'height': height,
+                    'top': move,
+                    'left': move
+                }, {duration: 200});
+                //显示标题
+                $(this).find('div.caption').stop(false, true).fadeIn(200);
+            }, function () {
+                //复位图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': $('.item').width(),
+                    'height': $('.item').height(),
+                    'top': '0',
+                    'left': '0'
+                }, {duration: 100});
+                //隐藏标题
+                $(this).find('div.caption').stop(false, true).fadeOut(200);
+            });
+        });
+    </script>
+
+
+</head>
+<body class="total">
+<div class="top">
+    <ul class="top1">
+        <li><a target="_blank"  href="/">首页</a></li>
+        <li><a target="_blank"  href="/movie">影视首页</a></li>
+        <li><a target="_blank"  href="/person">个人中心</a></li>
+        <li><a target="_blank"  href="/abus">关于我们</a></li>
+        <li><a target="_blank"  href="/person">{{nickname}}</a></li>
+    </ul>
+    <ul class="top2">
+        <li><a target="_blank"  href="/logreg/log">登录</a></li>
+        <li><a target="_blank"  href="/logreg/reg">注册</a></li>
+        <li><a target="_blank"  href="/quit">注销</a></li>
+    </ul>
+</div>
+<div class="demopage">
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/xunlong.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《驯龙高手：归家》</a>
+                <p>
+                    故事发生在小嗝嗝与没牙仔分开的五年之后，博克岛一年一度的亲衣节又到了，然而随着小嗝嗝的孩子们的长大，对龙与人曾经那段真挚
+                    而深刻的友谊只能通过父母的言语来了解，不免产生了质疑，小嗝嗝为防止孩子们对龙的误解，又能想出怎样的妙招呢？
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/tianqi.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《天气之子》</a>
+                <p>
+                    高一那年夏天，帆高（醍醐虎汰朗配音）离开位在离岛的家乡，独自一人来到东京，拮据的生活迫使他不得不找份工作，最后来到一间专
+                    门出版奇怪超自然刊物的出版社担任写手。不久，东京开始下起连日大雨，仿佛暗示着帆高不顺遂的未来，在这座繁忙城市里到处取材的
+                    帆高邂逅了与弟弟相依为命，不可思议的美少女阳菜（森七菜配音）。「等等就会放晴了喔。」阳菜这样告诉着帆高，不久，头顶的乌云
+                    逐渐散去，耀眼的阳光洒落街道……原来，阳菜拥有「改变天气」的奇妙能力……
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/qingyu.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《千与千寻》</a>
+                <p>
+                    是宫崎骏执导、编剧，柊瑠美、入野自由、中村彰男、夏木真理等配音，吉卜力工作室制作的动画电影。该片讲述了少女千寻意外来到神
+                    灵异世界后，为了救爸爸妈妈，经历了很多磨难的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/longmao.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《龙猫》</a>
+                <p>
+                    是由宫崎骏执导，日高法子、坂本千夏、糸井重里配音的动画电影，于1988年4月16日在日本上映。高清重制版于2018年12月14日在中
+                    国公映。该片讲述了草壁达郎的妻子草壁靖子生病住院后，他带着草壁皋月与四岁的妹妹草壁米回到乡间居住的故事。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/nezha.jpg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《哪吒之魔童降世》</a>
+                <p>
+                    天地灵气孕育出一颗能量巨大的混元珠，元始天尊将混元珠提炼成灵珠和魔丸，灵珠投胎为人，助周伐纣时可堪大用；而魔丸则会诞出魔
+                    王，为祸人间。元始天尊启动了天劫咒语，3年后天雷将会降临，摧毁魔丸。太乙受命将灵珠托生于陈塘关李靖家的儿子哪吒身上。然而阴
+                    差阳错，灵珠和魔丸竟然被掉包。本应是灵珠英雄的哪吒却成了混世大魔王。调皮捣蛋顽劣不堪的哪吒却徒有一颗做英雄的心。然而面对众
+                    人对魔丸的误解和即将来临的天雷的降临，哪吒是否命中注定会立地成魔？他将何去何从？
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/luoxiaohei.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《罗小黑战记》</a>
+                <p>
+                    罗小黑不是一只普通的猫咪，它极通人性，会蹲马桶，不吃猫粮，长长的尾巴甚至能分裂成多个名为“黑咻”的生物体。另一方面，谛听发
+                    动手下三匹长着翅膀的狼，搜寻着罗小黑的下落。不久，罗小白带着小黑到乡下探望堂哥阿根和爷爷，由此发生了种种离奇玄幻事件。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/kuiba.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《魁拔》</a>
+                <p>
+                    平静安详的元泱境界，每隔333年，总会有一个神秘而恐怖的异常生物重生，它就是魁拔！魁拔的每一次出现，都会给元泱境界带来巨大
+                    的灾难！即便是天界的神族，也在劫难逃。在天地两界各种力量的全力打击下，魁拔一次次被消灭，但又总是按333年的周期重新出现。
+                    魁拔纪元1664年，天神经过精确测算后，在魁拔苏醒前一刻对其进行毁灭性打击。但谁都没有想到，由于一个差错导致新一代魁拔成功地
+                    逃脱了致命一击。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/dayu.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《大鱼海棠》</a>
+                <p>
+                    是彼岸天文化有限公司、北京光线影业有限公司、霍尔果斯彩条屋影业有限公司联合出品，由梁旋、张春执导，梁旋编剧，季冠霖、苏尚
+                    卿、许魏洲、金士杰等配音的奇幻动画电影。该片讲述了掌管海棠花生长的少女椿为报恩而努力复活人类男孩“鲲”的灵魂，在本是天神的
+                    湫帮助下与彼此纠缠的命运斗争的故事。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/xueren.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《雪人奇缘》</a>
+                <p>
+                    是由吉尔·卡尔顿担任导演及编剧的动画电影，由汪可盈等人英文配音，张子枫、陈飞宇、万茜、蔡明等人中文配音，于2019年10月1日
+                    在中国上映。影片讲述了来自繁华城市的小艺意外在屋顶发现传说中的雪人大毛，决定与小伙伴阿俊、鹏鹏一起横穿祖国3000公里护送雪
+                    人大毛回到家乡珠穆朗玛峰的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/xiaofei.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《小飞象》</a>
+                <p>
+                    在马戏团老板麦克斯·美第奇（丹尼·德维托饰）雇佣下，过气马戏明星霍特·法瑞尔（柯林·法瑞尔饰）与儿女米莉（妮可·帕克饰）和乔
+                    （芬利·霍宾斯饰）一起照顾刚出生就因耳朵巨大的小飞象。小飞象初次亮相表演场因为耳朵巨大而被笑话，其母为保护它造成了一场意外
+                    ，导致小飞象和母亲分离
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/gongniu.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《公牛历险记》</a>
+                <p>
+                    影片根据曼罗·里夫1936年经典童书《爱花的牛》改编，讲述西班牙一头名为“费迪南德”（约翰·塞纳 John Cena 配音）的公牛的爆笑
+                    历险故事。费迪南德体型健壮，但却心地善良性格温和，它被误认为是危险的野兽，从而被捕送往他乡被逼做一只“斗牛”。为回到家人身边
+                    ，他不得不踏上了一场终极冒险旅程……
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/gongfuxiong.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《功夫熊猫：２》</a>
+                <p>
+                    是一部以中国功夫为主题的美国动作喜剧电影，影片以中国古代为背景，其景观、布景、服装以至食物均充满中国元素。故事讲述了一只
+                    笨拙的熊猫立志成为武林高手的故事。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <p>
+            &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+        </p>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,535 @@
+@import url(http://fonts.googleapis.com/css?family=Questrial);
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #24282c;
+    font-family: "Questrial", Arial, Helvetica, sans-serif;
+}
+
+#slider-wrapper {
+    width: 1024px;
+    height: auto;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#dots {
+    cursor: default;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+#dots li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1.0;
+    background: #61676D;
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+#dots li.active, #dots li:hover {
+    background: #c4c9cf;
+}
+
+
+.nav-arrow {
+    width: 46px;
+    height: 343px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1.0;
+    cursor: pointer;
+}
+
+#arrow-left {
+    background: url(http://www.derekhilldesign.com/projects/slider-header/images/arrow-left.png) center center no-repeat;
+}
+
+#arrow-right {
+    background: url(http://www.derekhilldesign.com/projects/slider-header/images/arrow-right.png) center center no-repeat;
+}
+
+#arrow-right:hover, #arrow-left:hover {
+    background-color: #1e2225;
+}
+
+#image-slider {
+    width: 923px;
+    height: 343px;
+    position: relative;
+    margin-top: 10px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    zoom: 1.0;
+}
+
+#slider-wrapper:before {
+    content: '';
+    width: 974px;
+    height: 52px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -487px;
+    top: 375px;
+    background: url(http://www.derekhilldesign.com/projects/slider-header/images/shadow.png) center center no-repeat;
+}
+
+#image-slider ul {
+    width: 923px;
+    height: 343px;
+    position: relative;
+}
+
+#image-slider ul li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1.0;
+    position: absolute;
+    top: 0;
+    left: -923px;
+}
+
+#image-slider ul li.active-img {
+    left: 0;
+}
+
+.next-img {
+    z-index: 9999;
+}
+
+#nav-bar {
+    width: 923px;
+    position: absolute;
+    z-index: 999999;
+    bottom: -3px;
+}
+
+#nav-bar a {
+    display: inline-block;
+    *display: block;
+    zoom: 1.0;
+    width: 231px;
+    text-align: center;
+    height: 26px;
+    padding-top: 9px;
+    color: #fff;
+    overflow: hidden;
+    font-size: 21px;
+    text-shadow: 0 1px 5px #000;
+    text-decoration: none;
+    position: relative;
+    background: rgba(2, 19, 32, 0.9);
+    -webkit-transition: padding-top .25s;
+    -moz-transition: padding-top .25s;
+    transition: padding-top .25s;
+}
+
+#nav-bar a:first-child {
+    width: 230px;
+}
+
+#nav-bar a div {
+    height: 0;
+    width: 231px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#nav-bar a div img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.3;
+}
+
+#nav-bar a:hover {
+    padding-top: 317px;
+    box-shadow: 0 0 5px #000;
+}
+
+#nav-bar a:hover div {
+    height: 343px;
+}
+
+#background_all {
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*overflow: hidden;*/
+    /*position: absolute;*/
+    background-image: url("../../img/music_img/background05.jpeg");
+}
+
+#background_level1 {
+    background-color: #363636;
+    background-image: url("../../img/music_img/background03.jpg");
+}
+
+.box_all {
+    width: 1250px;
+    height: 909px;
+    margin: 0 auto;
+    clear: both;
+
+}
+
+.block_left {
+    width: 396px;
+    height: 675px;
+    float: left;
+    background-color: #c4c9cf;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.loaded {
+    width: 334px;
+    height: 334px;
+}
+
+#arrow-left.nav-arrow {
+    background-color: #555555;
+}
+
+#arrow-right.nav-arrow {
+    background-color: #555555;
+}
+
+.list-inline-item {
+    list-style-type: none;
+}
+
+.h1_mb {
+    padding-left: 32px;
+    margin: 0 auto;
+    height: 665px;
+}
+
+.block_left {
+    padding: 10px 10px 10px 10px;
+    float: top;
+}
+
+.box_right {
+    background-color: #c4c9cf;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0 0 0 0;
+
+}
+
+.box_all .box_right #v {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 50% 50%;
+    padding-top: 10px;
+    outline: none;
+}
+
+.index-chart-title {
+    margin: 0 0 0 0;
+}
+
+.xl_text {
+    list-style-type: none;
+    width: 300px;
+    height: 501px;
+    background-color: whitesmoke;
+    border-radius: 10px 10px 10px 10px;
+
+
+}
+
+#v {
+    width: 30px;
+    height: 30px;
+    padding-top: 0;
+}
+
+.dj01 {
+    width: 99px;
+    height: 34px;
+    background-color: lightgoldenrodyellow;
+    float: right;
+    font-size: 18px;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.dj02 {
+    width: 99px;
+    height: 34px;
+    background-color: lightgoldenrodyellow;
+    float: right;
+    font-size: 18px;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.dj01_a {
+    text-decoration: none;
+    margin: 4px;
+}
+
+
+.dj02_a {
+    text-decoration: none;
+    margin: 13px;
+}
+
+.dj01 {
+    margin: 0 auto;
+}
+
+.dj02 {
+    margin: 0 auto;
+}
+
+.music_list1_jpg {
+    width: 86px;
+    height: 86px;
+    list-style-type: none;
+}
+
+.music_modle {
+    list-style-type: none;
+
+}
+
+.music_list1 {
+    background-color: #c4c9cf;
+    width: 832px;
+    height: 109px;
+    float: right;
+    border-radius: 0 10px 10px 0;
+    border: 1px #222222 solid;
+}
+
+.music_list1_jpg {
+    float: left;
+
+}
+
+.music_list1_h4_1 {
+    width: 70px;
+    height: 31px;
+    margin: 0;
+    float: left;
+    position: marker;
+    padding-top: 30px;
+
+}
+
+.music_list1_h4_2 {
+    float: top;
+    margin: 0;
+    padding-top: 20px;
+
+}
+
+.music_list_h5 {
+    float: left;
+    margin: 0;
+}
+
+.music_list1_button {
+    float: right;
+
+}
+
+.ly_out {
+    float: left;
+    margin-left: -10px;
+    padding: 10px 0 10px 10px;
+    width: 406px;
+    height: 430px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #c4c9cf;
+    /*border: 1px #222222 solid ;*/
+}
+
+.ly_in {
+    padding-left: 32px;
+
+}
+
+.ly_bt {
+    margin: 0 0 0 0;
+}
+
+.ly_fbt {
+    margin: 0 0 0 0;
+}
+
+.level2_part {
+    width: 974px;
+    height: 52px;
+    margin: 0 0 0 400px;
+
+
+}
+
+.level1 {
+    /*width: 1403px;*/
+    height: 1538px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.level2 #level2_h2 {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    float: top;
+}
+
+.level2 {
+
+}
+
+.box_all2 {
+    width: 1250px;
+    height: 400px;
+    margin: 0 auto;
+    clear: both;
+    background-color: #c4c9cf   ;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.level2 #level2_a1 {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    float: right;
+}
+
+.level2_bt01 {
+    width: 1250px;
+    height: 32px;
+}
+
+.top {
+    /* 设置宽度高度背景颜色 */
+    height: 50px;
+    width: 100%;
+    /*background: rgb(189, 181, 181);*/
+    /*固定在顶部*/
+    top: 0; /*离顶部的距离为0*/
+
+}
+
+.top ul {
+    /* 清除ul标签的默认样式 */
+    width: 80%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.top li {
+    float: left; /* 使li内容横向浮动，即横向排列  */
+    margin-right: 50px; /* 两个li之间的距离*/
+}
+
+.top li a {
+    /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; /* 去除下划线 */
+}
+
+.top li a:hover {
+    /* 鼠标选中时背景变为黑色 */
+    background-color: #111;
+}
+
+.total {
+    margin: 0;
+    padding: 0;
+}
+.level2_box1_img{
+    width: 228px;
+    height: 228px;
+
+}
+.level2_box1{
+    width: 260px;
+    height: 460px;
+    padding-left: 42px;
+    float: left;
+}
+
+.level2_box2{
+    width: 260px;
+    height: 460px;
+    padding-left: 42px;
+    float: left;
+}
+
+.level2_box3{
+    width: 260px;
+    height: 460px;
+    padding-left: 42px;
+    float: left;
+}
+
+.level2_box4{
+    width: 260px;
+    height: 460px;
+    padding-left: 42px;
+    float: left;
+}
+.head_top{
+	/*background: white;*/
+	width: 100%;
+	height: 80px;
+	padding-top: 10px;
+    background-color: #cccccc;
+}
+.topNacCenter{
+	width: 1680px;
+	height: 80px;
+	margin: auto;
+}
+.fix_log{
+	float: left;
+	margin-top: 16px;
+	height: 30px;
+	display: inline-block;
+	width: 120px;
+	/*background-color: #c4c9cf;*/
+}
+.top_menu_list1{
+	float: left;
+	height: 30px;
+	margin-left: 80px;
+	margin-top: 16px;
+	padding: 0;
+}
+.top_menu_list2{
+	float: right;
+	padding: 0;
+	margin-top: 16px;
+
+}
+.f1{
+	font-size: 18px;
+	float: left;
+	padding: 0 20px;
+    list-style-type: none;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.Audio{
+    float: right;
+}

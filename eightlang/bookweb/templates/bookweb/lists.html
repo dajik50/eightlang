@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小说分类</title>
+    <link rel="stylesheet" href="../../../static/css/bookweb_css/blog.css">
+    <script src="../../../static/js/bookweb_js/jquery.min.js"></script>
+    <script src="../../../static/js/bookweb_js/scrollReveal.js"></script>
+    <style>
+        #layer2 {
+            padding-top: 40px;
+        }
+
+        #layer2 a {
+            color: black;
+        }
+
+        .cright {
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+            border-bottom-left-radius: 20%;
+            border-bottom-right-radius: 20%;
+        }
+    </style>
+</head>
+<body>
+{% include 'bookweb/header.html' %}
+<div id="layer2">
+    <div class="cleft">
+        <div class="ccon">
+            <div class="cctip"><a target="_blank"  href="#">最小说</a></div>
+            <div class="ccframe">
+                <div>
+                    <a target="_blank"  href="#"><img src='../../../static/img/bookweb_img/toppic01.jpg' width="300" alt=""></a>
+                </div>
+                <div class="ccright">
+                    <p>成神之路</p>
+                    <div class="info">234人已阅读</div>
+                </div>
+            </div>
+        </div>
+        <div class="ccon">
+            <div class="cctip"><a target="_blank"  href="#">最好看的现代小说</a></div>
+            <div class="ccframe">
+                <div>
+                    <a target="_blank"  href="#"><img src='../../../static/img/bookweb_img/toppic01.jpg' width="300" alt=""></a>
+                </div>
+                <div class="ccright">
+                    <p>啊哈</p>
+                    <div class="info">234人已阅读</div>
+                </div>
+            </div>
+        </div>
+        <div class="ccon">
+            <div class="cctip"><a target="_blank"  href="#">奇奇怪怪的</a></div>
+            <div class="ccframe">
+                <div>
+                    <a target="_blank"  href="#"><img src='../../../static/img/bookweb_img/toppic01.jpg' width="300" alt=""></a>
+                </div>
+                <div class="ccright">
+                    <p>当前环境,Python语法在很大程度上合适人工智能领域的代码编写</p>
+                    <div class="info">234人已阅读</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="cright">
+        <h3>特别推荐</h3>
+        <div class="line"></div>
+        <div>
+            <img src='../../../static/img/bookweb_img/banner01.jpg' width="300" alt="">
+        </div>
+        <div>
+            <img src='../../../static/img/bookweb_img/banner02.jpg' width="300" alt="">
+        </div>
+        <div>
+            <img src='../../../static/img/bookweb_img/banner03.jpg' width="300" alt="">
+        </div>
+    </div>
+</div>
+{% include 'bookweb/bottom.html' %}
+<script src="../../../static/js/bookweb_js/index.js?1321"></script>
+<script>
+    //调用获取焦点的元素
+    getFocus($('#l2 a'))
+
+</script>
+</body>
+</html>

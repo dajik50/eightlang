@@ -1,0 +1,66 @@
+body {
+    background-color: lightgray;
+    background-image: url("");
+}
+/*---超链接取消下划线---*/
+body a {
+    text-decoration: none;
+}
+
+/*---标题栏---*/
+.top {
+    display: block;
+    padding-top: 10px;
+    width: 1800px;
+    height: 80px;
+    text-align: center;
+}
+
+.top #sign {
+    display: inline;
+}
+
+.top img {
+    width: 180px;
+    height: 70px;
+    float: left;
+}
+
+.top #welcome {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.top #logging {
+    float: right;
+}
+
+.top a {
+    color: dodgerblue;
+}
+
+/*---登录成功图片---*/
+#welcome{
+    text-align: center;
+}
+#welcome h2{
+    color: #2878b2;
+}
+#welcome img{
+    width: 600px;
+    height: 400px;
+}
+
+
+/*---底部栏---*/
+/*---底部栏---*/
+.bottom {
+    margin-top: 100px;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+
+.bottom p {
+    font-size: 12px;
+}

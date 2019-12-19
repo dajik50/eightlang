@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爱情</title>
+
+    <style type="text/css">
+        .total {
+            background: url("../../../static/img/movie_img/beijing1.jpg");
+            background-size: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        body {
+            font: 12px/180% "宋体", Arial, Helvetica, sans-serif;
+        }
+
+        .demopage {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        /* item */
+        .item {
+            width: 370px;
+            height: 220px;
+            border: 2px solid #000;
+            margin: 5px 5px 5px 0;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+
+        .item .caption {
+            width: 370px;
+            height: 220px;
+            background: url(../../../static/img/movie_img/5.jpg);
+            _background: #000000;
+            color: black;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            display: none;
+            opacity: 0.7;
+        }
+
+        .item .caption a {
+            text-decoration: none;
+            color: #0cc7dd;
+            font-size: 14px;
+            padding: 5px;
+            display: block;
+        }
+
+        .item .caption p a {
+            padding: 5px;
+            margin: 0;
+            font-size: 12px;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        .item img {
+            border: 0;
+            position: absolute;
+            width: 100%;
+            height: 220px;
+        }
+
+        .movie1 {
+            float: left;
+            margin-left: 200px;
+        }
+
+        .top {
+            height: 50px;
+            width: 100%;
+            top: 10px;
+            background: #727272;
+        }
+
+        .top li {
+            float: left;
+            padding-top: 12px;
+        }
+
+        .top .top2 {
+            position: relative;
+            padding-left: 90%;
+        }
+
+        .top .top1 li {
+            margin-right: 50px;
+        }
+
+        .top .top2 li {
+            margin-right: 20px;
+        }
+
+        .top li a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .top li a:hover {
+            background-color: blue;
+        }
+
+        #footer {
+            width: 100%;
+            background-color: #555;
+            color: #f1f1f1;
+            margin-top: 881px;
+        }
+
+        #footer p {
+            text-align: center;
+            width: 1140px;
+            margin: 0 auto;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        #footer p a:hover {
+            background-color: lemonchiffon;
+        }
+                /*---底部栏---*/
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            color: #cccccc;
+            padding: 30px 0;
+            z-index: 1;
+        }
+
+        .bottom p {
+            font-size: 18px;
+        }
+    </style>
+    <script type="text/javascript" src="../../../static/js/movie_js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //移动像素的图像
+            var move = -15;
+            //缩放比例，1.2 =120％
+            var zoom = 1.2;
+            //在对这些缩略图的鼠标滑过事件
+            $('.item').hover(function () {
+                //根据缩放百分比设置宽度和高度
+                width = $('.item').width() * zoom;
+                height = $('.item').height() * zoom;
+                //移动和缩放图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': width,
+                    'height': height,
+                    'top': move,
+                    'left': move
+                }, {duration: 200});
+                //显示标题
+                $(this).find('div.caption').stop(false, true).fadeIn(200);
+            }, function () {
+                //复位图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': $('.item').width(),
+                    'height': $('.item').height(),
+                    'top': '0',
+                    'left': '0'
+                }, {duration: 100});
+                //隐藏标题
+                $(this).find('div.caption').stop(false, true).fadeOut(200);
+            });
+        });
+    </script>
+
+
+</head>
+<body class="total">
+<div class="top">
+       <ul class="top1">
+        <li><a target="_blank"  href="/">首页</a></li>
+        <li><a target="_blank"  href="/movie">影视首页</a></li>
+        <li><a target="_blank"  href="/person">个人中心</a></li>
+        <li><a target="_blank"  href="/abus">关于我们</a></li><li>
+           <a target="_blank"  href="/person">{{ nickname }}</a></li>
+    </ul>
+    <ul class="top2">
+        <li><a target="_blank"  href="/logreg/log">登录</a></li>
+        <li><a target="_blank"  href="/logreg/reg">注册</a></li>
+        <li><a target="_blank"  href="/quit">注销</a></li>
+    </ul>
+</div>
+<div class="demopage">
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/taitan.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《泰坦尼克号》</a>
+                <p>
+                    是美国二十世纪福斯电影公司、派拉蒙影业公司出品爱情片，由詹姆斯·卡梅隆执导，莱昂纳多·迪卡普里奥、凯特·温斯莱特领衔主演。
+                    影片以1912年泰坦尼克号邮轮在其处女启航时触礁冰山而沉没的事件为背景，讲述了处于不同阶层的两个人穷画家杰克和贵族女露丝
+                    抛弃世俗的偏见坠入爱河，最终杰克把生命的机会让给了露丝的感人故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/luomiou.jpg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《罗密欧与朱丽叶》</a>
+                <p>
+                    罗密欧与朱丽叶在一个派对上一见钟情了，这个派对是为了庆祝朱丽叶找到了如意郎君。可是他们各自所在的家族是死对头，常常爆发
+                    冲突。罗密欧潜入了朱丽叶家的后院，两人互诉爱意，由于知道家族之间的不和是他们的障碍，所以他们在神父的帮助下秘密完婚。朱丽
+                    叶的表兄泰华是个暴躁的人，他要跟罗密欧决斗可是罗密欧只想和平相处，罗密欧好友莫邱托想杀死泰华，却先被泰华杀死，罗密欧愤怒
+                    之下也把泰华...
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/xingyun.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《星运里的错》</a>
+                <p>
+                    是2014年乔什·波恩执导的青少年浪漫爱情片，由谢琳·伍德蕾、安塞尔·埃尔格特等主演，根据约翰·格林同名小说
+                    《无比美妙的痛苦》改编，讲述了两个患有癌症的青少年间有关爱情，生命和死亡的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/huiguniang.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《灰姑娘》</a>
+                <p>
+                    是迪士尼公司出品的剧情片，由肯尼思·布拉纳执导，凯特·布兰切特、莉莉·詹姆斯、理查德·麦登、海伦娜·伯翰·卡特等主演。
+                    影片改编自同名动画电影《灰姑娘》，剧情延续迪士尼经典动画的故事——灰姑娘母亲、父亲相继去世，继母和其女儿们对她百般
+                    折磨，但灰姑娘得到魔法相助，成为王子的意中人的故事。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/xialuote.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《夏洛特烦恼》</a>
+                <p>
+                    因为一场意外，在梦里穿越回了1997年，从窝囊废逆袭成为时代偶像。穿越后的夏洛成功追到校花，摆脱了现实中的媳妇马冬梅。但是
+                    在走上了人生巅峰后，夏洛却遭遇了欺骗、背叛，才终于醒悟，感受到之前和马冬梅在一起的日子，虽然艰辛，但平淡之中不乏幸福，为
+                    了再次抓住幸福，他就一直甜蜜的抱着马冬梅。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/chaoshikong.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《超时空同居》</a>
+                <p>
+                    是由苏伦执导、徐峥监制，雷佳音、佟丽娅领衔主演的奇幻爱情喜剧片。该片于2018年5月18日在中国内地上映。该片讲述了来自2018
+                    年的失意女青年谷小焦与来自1999年的不得志男青年陆鸣，因时空重叠意外住在同一个房间，从而发生了一系列啼笑皆非，有苦有甜的爱
+                    情故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/shaonian.jpg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《少年的你》</a>
+                <p>
+                    一场高考前夕的校园意外，改变了两个少年的命运，陈念（周冬雨饰）性格内向，是学校里的优等生，努力复习、考上好大学是高三的她
+                    唯一的念头。同班同学的意外坠楼牵扯出一连串不为人知的故事，陈念也被一点点卷入其中…在她最孤独的时刻，一个叫小北（易烊千玺饰
+                    ）的少年闯入了她的世界。大多数人的18岁都是明媚、快乐的，而他们却在18岁这个夏天提前尝到了成人世界的漠然。一场秘而不宣的“战
+                    斗”正在上演，他们将一起守护少年的尊严。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/xinhua.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《心花怒放》</a>
+                <p>
+                    是2014年9月30号上映的一部影片，该片由宁浩执导，由黄渤、徐峥等主演。电影《心花路放》讲述了在生活中遭遇了情感危机的耿浩
+                    （黄渤饰），陷入难以自拔的痛苦之中，好基友郝义（徐峥饰）为了帮助他摆脱痛苦，带着耿浩开始了一段非常搞笑的疯狂的猎艳之旅。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/fengniao.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《蜂鸟》</a>
+                <p>
+                    圣水大桥坍塌的1994年，中学生恩熙和父母、姐姐、哥哥一起生活。全家在各自的问题上争吵，此时的恩熙寻觅未至的爱情，像岛一样
+                    漂浮。恩熙的生活里，唯一能给予理解的她出现了。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/xianzai.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《现在去见你》</a>
+                <p>
+                    妻子秀雅（孙艺珍饰）在去世前与亲人约定，会在一年后下雨的那天回来。一年后，她突然出现在丈夫佑振（苏志燮饰）以及儿子智浩
+                    （金正焕饰）面前，但却记忆全无。在六周的时间内，她与丈夫和儿子重续夫妻情、母子情，三人一起度过了一段温馨时光。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/zuizhong.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《最终幻想女孩》</a>
+                <p>
+                    来自雪国的年轻女孩江藤良香（松冈茉优 饰）独自在东京打拼，至今从未谈过恋爱的她日常喜欢灭绝动物，关于爱情她念念不忘的是学
+                    生时代的帅气男孩阿一（北村匠海 饰）。她将心中所爱所想说给身边的检票员、超市收银员、钓鱼大叔、公交乘客，看起来是那么开朗
+                    无忧。在一次公司聚会上，看起来十分不靠谱的男生阿二（渡边大知 饰）主动搭话，之后更向其表白。良香敷衍着这个神经兮兮的男生，
+                    心中一直放不下阿一。于是，她鼓起勇气，以其他同学的名义策划了同学聚会。经过一番努力，同学会如期召开，良香朝思暮想的阿一也
+                    终于到会，只不过随后的发展却事与愿违……
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/kuayue.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《跨越八年的新娘》</a>
+                <p>
+                    是濑濑敬久执导的爱情片，由佐藤健、土屋太凤主演，于2017年12月16日在日本上映，2018年10月19日在中国大陆上映。该片改编自
+                    根据真实事件创作的纪实作品《历经八年的新娘：如果你醒来》，讲述尚志细心照料因患怪病陷入昏睡的未婚妻麻衣，终于等到奇迹来临
+                    的故事。
+                </p>
+            </div>
+        </div>
+    </div>
+        <div class="bottom">
+        <p>
+            &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

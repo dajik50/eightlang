@@ -1,0 +1,304 @@
+/*导航栏css*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+a{
+	text-decoration: none;
+}
+body{
+	font-size: 14px;
+	background-color:white;
+}
+ul{
+	list-style: none;
+}
+.head_top{
+	background: white;
+	width: 100%;
+	height: 80px;
+	padding-top: 10px;
+
+}
+.topNacCenter{
+	width: 1680px;
+	height: 80px;
+	margin: auto;
+}
+.fix_log{
+	float: left;
+	margin-top: 16px;
+	height: 30px;
+	display: inline-block;
+	width: 120px;	
+	background: url(../../../static/img/sports_img/logo.jpg) no-repeat center / auto 100%;
+}
+.top_menu_list1{
+	float: left;
+	height: 30px;
+	margin-left: 80px;
+	margin-top: 16px;
+	padding: 0;
+}
+.top_menu_list2{
+	float: right;
+	padding: 0;
+	margin-top: 16px;
+
+}
+.f1{
+	font-size: 18px;
+	float: left;
+	padding: 0 20px;
+	color: black;
+}
+
+
+
+
+/*以下为轮播图css */
+.banner{
+    width: 100%;
+    height: 600px;
+    
+	
+    position: relative;
+}
+.banner .pic li{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.banner .tab{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 128px;
+    margin-left: -100px;
+    height: 22px;
+}
+.banner .tab li{
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 50%;
+    float: left;
+    margin: 5px;
+}
+.banner .btn li{
+    list-style: none;
+} 
+.banner .tab li.on{
+    background-color: aqua;
+}
+.banner .btn li span{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: none;
+}
+.banner:hover .btn li span{
+    display: block;
+
+
+}
+.banner .btn li.left span{
+    left: 0;
+}
+.banner .btn li.right span{
+    right: 0;
+}
+.ima{
+	z-index: 10000;
+	position: absolute;
+	left: 10px;
+	top: 0;
+	font-size: 30px;
+	color: #cccccc;
+}
+
+/*内容*/
+.content{
+	
+	width: 100%;
+	height: 100%;
+	margin-top: 10px;
+}
+.content_box{
+	float: left;
+	
+	width: 70%;
+	/* height: 100%; */
+	margin-left: 10px;
+	/*border: 1px solid red;*/
+}
+.content_title{
+	/*width: 100%;*/
+	height: 40px;
+	margin: auto;
+	text-align: center;
+	position: relative;
+	padding: 48px 0 36px 0;
+}
+.content_title span{
+	display: inline-block;
+	font-size: 30px;
+	color: #000;
+
+	
+}
+.content_title a{
+	position: absolute;
+	right: 160px;
+	line-height: 40px;
+}
+
+#eur{
+	display: none;
+}
+#spa{
+	display: none;
+}
+#ini{
+	display: none;
+}
+.content_text{
+	
+	width: 85%;
+	height: 700px;
+	margin: auto;
+	position: relative;
+}
+.content_text ul{
+	width: 98%;
+	
+	height: 100%;
+	margin: auto;
+}
+.content_text li{
+	width: 100%;
+	height: 230px;
+	/* border: 1px solid #000; */
+	margin-top: 10px;
+}
+.content_img{
+	width: 300px;
+	height: 230px;
+	/* border: 1px solid #000; */
+}
+
+a:link {color:red;}		/* 未被访问的链接 */
+a:visited {color: #727272}	/* 已被访问的链接 */
+a:hover {color:lightpink;
+			font-size: 25px}	/* 鼠标指针移动到链接上 */
+a:active {color:#0000FF;}	/* 正在被点击的链接 */
+
+
+/* 	.content_img li{
+	position: relative;
+} */
+
+.content_img{
+	width: 301px;
+	height: 229px;
+	float: left;
+}
+
+
+.content_img a{
+	width: 100%;
+	height: 100%;
+	
+}
+
+.content_img a img{
+	width: 100%;
+	height: 100%;
+}
+.content_zhong{
+	float: left;
+	width: 660px;
+	height: 229px;
+	background-color: beige;
+}
+
+.content_top{
+	width: 465px;
+	height: 100%;
+	float: right;
+	position: relative;
+	border:1px solid #FF0000;
+	margin-right:50px ;
+	
+}
+.content_top ul li{
+	float: left;
+	/* padding: 40px; */
+	
+}
+.team_name{
+	float: left;
+	font-size: 20px;
+	border: 1px solid aquamarine;
+	/* margin-top: 2px; */
+}
+.button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	/* height: 10px; */
+	padding: 25px 51px;
+	text-align: center;
+	text-decoration: none;
+	/* display: inline-block; */
+	font-size: 20px;
+	margin: 3px 1px;
+	cursor: pointer;
+	font-size: 25px;
+}
+/* 		.team_name li{
+	border: 1px solid aquamarine;
+	background: red;
+	height: 30px;
+	padding: 30px 40px;
+} */
+.top_name{
+	border: 1px solid #000000;
+	float: left;
+	/* width: 100%; */
+	border: none;
+}
+.top_name ul{
+	margin-left:45px ;
+	/* margin: auto; */
+	
+}
+.button1{
+	background-color:powderblue;
+	padding: 3px 30px;
+	margin: 2px;
+	color: white;
+	font-size: 20px;
+	margin-top: 5px;
+	border: none;
+
+}
+.top_list{
+	float: left;
+	width:100%;
+	height:100%;
+}
+
+.top_list1{
+	float: left;
+	width: 33.3%;
+	height:100%;
+	
+}
+.top_list1 ol{
+	margin-left:60px;
+}

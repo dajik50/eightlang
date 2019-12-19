@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <meta charset="UTF-8"/>
+
+    <title>音乐频道</title>
+
+    <link rel='stylesheet' href='../../../static/css/music_css/jquery-ui.css'>
+
+    <link rel="stylesheet" href="../../../static/css/music_css/style.css">
+
+</head>
+
+<body id="background_all">
+<div class="head_top">
+    <div class="topNacCenter">
+        <a target="_blank"  href="#" class="fix_log"></a>
+        <ul class="top_menu_list1">
+            <li class="f1"><a target="_blank"  class="f1" href="/">首页</a></li>
+            <li class="f1"><a target="_blank"  class="f1" href="#">灵魂乐</a></li>
+            <li class="f1"><a target="_blank"  class="f1" href="#">说唱</a></li>
+            <li class="f1"><a target="_blank"  class="f1" href="/person">个人中心</a></li>
+            <li class="f1"><a target="_blank"  class="f1" href="/abus">关于我们</a></li>
+            <li class="f1"><a target="_blank"  class="f1" href="/music/liuyan">留言区</a></li>
+            <li class="f1"><a target="_blank"  class="f1" href="/person">{{ nickname }}</a></li>
+
+        </ul>
+        <ul class="top_menu_list2">
+            <li class="f1"><a target="_blank"  class="f1" href="/logreg/log">登录</a></li>
+            <li class="f1"><a target="_blank"  class="f1" href="/logreg/reg">注册</a></li>
+            <li class="f1"><a target="_blank"  class="f1" href="/quit">注销</a></li>
+        </ul>
+    </div>
+</div>
+<div class="level1">
+    <div id="slider-wrapper">
+        <div id="dots">
+            <div>
+                <ul>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div id="arrow-left" class="nav-arrow"></div>
+            <div id="image-slider">
+                <ul>
+                    <li class="active-img"><img src="../../../static/img/music_img/mcr02.jpeg" width="923" height="343"
+                                                alt=""/></li>
+                    <li><img src="../../../static/img/music_img/be01.jpeg" width="923" height="343" alt=""/></li>
+                    <li><img src="../../../static/img/music_img/acdc.jpg" width="923" height="343" alt=""/></li>
+                </ul>
+                <div id="nav-bar">
+                    <a target="_blank"  href="../../templates/music/music_mcr.html">
+                        <div><img src="../../../static/img/music_img/mcr01.jpg" width="231" height="342"/></div>
+                        我的化学浪漫</a><a target="_blank"  href="../../templates/music/ninja_turtles.html">
+                    <div><img src="../../../static/img/music_img/thumb-print.jpg"/></div>
+                    忍者神龟</a><a target="_blank"  href="../../templates/music/guns_n_roses.html">
+                    <div><img src="../../../static/img/music_img/gar02..jpeg" width="231" height="342"/></div>
+                    枪炮与玫瑰</a><a target="_blank"  href="../../templates/music/arch_enemy.html">
+                    <div><img src="../../../static/img/music_img/be02.jpeg" width="231" height="342"/></div>
+                    大敌乐队</a>
+                </div>
+            </div>
+            <div id="arrow-right" class="nav-arrow"></div>
+        </div>
+    </div>
+
+    <script src='../../../static/js/music_js/jquery_and_jqueryui.js'></script>
+
+    <script src="../../../static/js/music_js/index.js"></script>
+    <script>
+
+    </script>
+    <div class="box_all">
+        <div class="block_left">
+            <div class="h1_mb">
+                <h2 class="mb-4">一天一首</h2>
+
+                <div class="cover-block with-button mb-2">
+                    <a target="_blank"  href="#" tabindex="0">
+
+                        <img class="loaded"
+                             src="../../../static/img/music_img/demo01.jpg">
+
+                    </a>
+                </div>
+
+                <h3 class="text-truncate"><a target="_blank"  href="#" tabindex="0">
+
+                    05.遇见 cover(孙燕姿)</a></h3>
+                <h4 class="text-truncate"><a target="_blank"  href="#" tabindex="0">市中区柏杨中路</a></h4>
+                <hr>
+                <p>每日一曲，从日常的编辑推荐中再次精选而出，是我们给每一首好作品的至高激赏与鼓励。</p><a target="_blank"  href="#" class="btn btn-white btn-block">查看更多</a>
+            </div>
+            <div class="ly_out">
+                <div class="ly_in">
+                    <h1 class="ly_bt">留言板</h1>
+                    <h5 class="ly_fbt">在这里留下你对我们的建议</h5>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="box_right">
+            <h2 class="index-chart-title">
+                <div class="dj02">
+                    <a target="_blank"  class="dj02_a" href="#">播放全部</a>
+                </div>
+                <div class="dj01">
+                    <a target="_blank"  class="dj01_a" href="#">更多排行榜</a>
+                </div>
+                <span>8ightlang 即时热门</span>
+                <button id="v">
+                    <span>v</span>
+                    <ul class="xl_text" style="display: none">
+                        <li>实时热门</li>
+                        <li>古典</li>
+                        <li>流行</li>
+                        <li>流行</li>
+                    </ul>
+                </button>
+            </h2>
+
+            <div class="music_list1">
+                <li class="music_modle">
+                    <h4 class="music_list1_h4_1">01-</h4> <img class="music_list1_jpg"
+                                                               src="../../../static/img/music_img/music_list1_jpg1.jpeg"
+                                                               alt=""><h4
+                        class="music_list1_h4_2">Disenchanted</h4><h5 class="music_list_h5">《The Black Parade》</h5>
+                    <audio class="Audio" src="../../../static/songFile/My%20Chemical%20Romance%20-%20Disenchanted.mp3" controls
+                           loop="1"></audio>
+                </li>
+            </div>
+            <div class="music_list1">
+                <li class="music_modle">
+                    <div class="music_list1_box">
+                        <h4 class="music_list1_h4_1">02-</h4> <img class="music_list1_jpg"
+                                                                   src="../../../static/img/music_img/music_list1_jpg1.jpeg"
+                                                                   alt="">
+                        <h4
+                                class="music_list1_h4_2">I Don't Love You</h4><h5 class="music_list_h5">《The Black
+                        Parade》</h5>
+                        <audio class="Audio" src="../../../static/songFile/My%20Chemical%20Romance%20-%20I%20Don't%20Love%20You.mp3" controls
+                               loop="1"></audio>
+                    </div>
+                </li>
+            </div>
+            <div class="music_list1">
+                <li class="music_modle">
+                    <h4 class="music_list1_h4_1">03-</h4> <img class="music_list1_jpg"
+                                                               src="../../../static/img/music_img/music_list1_jpg3.jpeg"
+                                                               alt=""><h4
+                        class="music_list1_h4_2">Highway to Hell</h4><h5 class="music_list_h5">《Highway to Hell》</h5>
+                    <audio class="Audio" src="../../../static/songFile/AC／DC%20-%20Highway%20to%20Hell.mp3" controls
+                               loop="1"></audio>
+                </li>
+            </div>
+            <div class="music_list1">
+                <li class="music_modle">
+                    <h4 class="music_list1_h4_1">04-</h4> <img class="music_list1_jpg"
+                                                               src="../../../static/img/music_img/music_list1_jpg4.jpeg"
+                                                               alt=""><h4
+                        class="music_list1_h4_2">Back In Black</h4><h5 class="music_list_h5">《Iron Man 2》</h5>
+                    <audio class="Audio" src="../../../static/songFile/AC／DC%20-%20Back%20In%20Black.mp3" controls
+                               loop="1"></audio>
+                </li>
+            </div>
+            <div class="music_list1">
+                <li class="music_modle">
+                    <h4 class="music_list1_h4_1">05-</h4> <img class="music_list1_jpg"
+                                                               src="../../../static/img/music_img/music_list1_jpg5.jpg"
+                                                               alt=""><h4
+                        class="music_list1_h4_2">Welcome To The Jungle</h4><h5 class="music_list_h5">《Use Your
+                    Illusion
+                    II》</h5>
+                    <audio class="Audio" src="../../../static/songFile/Guns%20N'%20Roses%20-%20Welcome%20To%20The%20Jungle.mp3" controls
+                               loop="1"></audio>
+                </li>
+            </div>
+            <div class="music_list1">
+                <li class="music_modle">
+                    <h4 class="music_list1_h4_1">06-</h4> <img class="music_list1_jpg"
+                                                               src="../../../static/img/music_img/music_list1_jpg6.jpeg"
+                                                               alt=""><h4
+                        class="music_list1_h4_2">Sweet Child O' Mine</h4><h5 class="music_list_h5">《Greatest Hits》</h5>
+                    <audio class="Audio" src="../../../static/songFile/Guns%20N'%20Roses%20-%20Sweet%20Child%20O'%20Mine.mp3" controls
+                               loop="1"></audio>
+                </li>
+            </div>
+            <div class="music_list1">
+                <li class="music_modle">
+                    <h4 class="music_list1_h4_1">07-</h4> <img class="music_list1_jpg"
+                                                               src="../../../static/img/music_img/music_list1_jpg7.jpeg"
+                                                               alt=""><h4
+                        class="music_list1_h4_2">Sonne</h4><h5 class="music_list_h5">《Bravo Hits 33》</h5>
+                    <audio class="Audio" src="../../../static/songFile/Rammstein%20-%20Sonne.mp3" controls
+                               loop="1"></audio>
+                </li>
+            </div>
+            <div class="music_list1">
+                <li class="music_modle">
+                    <h4 class="music_list1_h4_1">08-</h4> <img class="music_list1_jpg"
+                                                               src="../../../static/img/music_img/music_list1_jpg8.jpg"
+                                                               alt=""><h4
+                        class="music_list1_h4_2">Ich will</h4><h5 class="music_list_h5">《Live At The Max》</h5>
+                    <audio class="Audio" src="../../../static/songFile/Rammstein%20-%20Ich%20Will.mp3" controls
+                               loop="1"></audio>
+                </li>
+            </div>
+            <div class="music_list1">
+                <li class="music_modle">
+                    <h4 class="music_list1_h4_1">09-</h4> <img class="music_list1_jpg"
+                                                               src="../../../static/img/music_img/music_list1_jpg9.jpeg"
+                                                               alt=""><h4
+                        class="music_list1_h4_2">This Is The New Shit</h4><h5 class="music_list_h5">《This Is The New
+                    Shit》</h5>
+                    <audio class="Audio" src="../../../static/songFile/Marilyn%20Manson%20-%20This%20Is%20The%20New%20Shit.mp3" controls
+                               loop="1"></audio>
+                </li>
+            </div>
+            <div class="music_list1">
+                <li class="music_modle">
+                    <h4 class="music_list1_h4_1">10-</h4> <img class="music_list1_jpg"
+                                                               src="../../../static/img/music_img/music_list1_jpg10.jpeg"
+                                                               alt=""><h4
+                        class="music_list1_h4_2">mOBSCENE</h4><h5 class="music_list_h5">《The Golden Age Of
+                    Grotesque》</h5>
+                    <audio class="Audio" src="../../../static/songFile/Marilyn%20Manson%20-%20mOBSCENE.mp3" controls
+                               loop="1"></audio>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="level2_part">
+
+</div>
+<div class="level2">
+    <div class="box_all2">
+        <div class="level2_bt01">
+            <h2 id="level2_h2">最新推荐歌单 <a target="_blank"  id="level2_a1" href="">更多歌单</a></h2>
+        </div>
+        <div class="level2_box1">
+            <img class="level2_box1_img" src="../../../static/img/music_img/music_list1_jpg2.jpg" alt="">
+            <h4>2019 EDM Song</h4>
+            <h5>8ightlang音乐频道</h5>
+        </div>
+        <div class="level2_box2">
+            <img class="level2_box1_img" src="../../../static/img/music_img/music_list1_jpg2.jpg" alt="">
+            <h4>2019 EDM Song</h4>
+            <h5>8ightlang音乐频道</h5>
+        </div>
+        <div class="level2_box3">
+            <img class="level2_box1_img" src="../../../static/img/music_img/music_list1_jpg2.jpg" alt="">
+            <h4>2019 EDM Song</h4>
+            <h5>8ightlang音乐频道</h5>
+        </div>
+        <div class="level2_box4">
+            <img class="level2_box1_img" src="../../../static/img/music_img/music_list1_jpg2.jpg" alt="">
+            <h4>2019 EDM Song</h4>
+            <h5>8ightlang音乐频道</h5>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <link rel="stylesheet" href="../../../static/css/bookweb_css/blog.css">
+    <script src="../../../static/js/bookweb_js/jquery.min.js"></script>
+    <script src="../../../static/js/bookweb_js/scrollReveal.js"></script>
+    <style>
+        #nav .focus {
+            color: aqua;
+        }
+
+        .container {
+            width: 50%;
+            height: 330px;
+            background-color: #89AF4C;
+        }
+
+        .lb {
+            vertical-align: top;
+        }
+
+        .cc {
+            margin: 10px;
+        }
+
+        .container1 {
+            width: 50%;
+            height: 600px;
+            background-color: wheat;
+        }
+
+        #msg {
+            padding-top: 100px;
+            padding-left: 500px;
+
+        }
+
+        #content {
+            width: 500px;
+            height: 200px;
+        }
+
+        #msg label {
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+<body>
+{% include 'bookweb/header.html' %}
+<div id="msg">
+    <div class="container">
+        <form action="/bookstore/liuyan" method="POST">
+            {% csrf_token %}
+            <label>欢迎留言</label>
+            <div class="cc">
+                <label class="lb">姓名</label>
+                <input type="text" class="xm" name="name">
+            </div>
+            <div class="cc">
+                <label class="lb" for="content">内容</label>
+                <textarea id="content" name="content"></textarea>
+            </div>
+            <input type="submit" value="提交">
+        </form>
+
+    </div>
+    <div class="container1">
+        <h3>历史留言</h3>
+        {% if messages %}
+            <ol>
+                {% for message in messages %}
+                    <li><p>{{ message.name }} 在 ({{ message.date }})留言</p>
+                        <div id="message">
+                            <p>{{ message.content }}</p>
+                        </div>
+                    </li>
+
+                {% endfor %}
+
+            </ol>
+        {% endif %}
+
+    </div>
+</div>
+{% include 'bookweb/bottom.html' %}
+</body>
+<script>
+    //调用获取焦点的元素
+    getFocus($('#l4 a'))
+</script>
+</html>

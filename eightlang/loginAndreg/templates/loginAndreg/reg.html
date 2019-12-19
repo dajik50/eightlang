@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>注册界面</title>
+    <style>
+        .large-header {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center center;
+            z-index: 1;
+        }
+
+        .demo-1 .large-header {
+
+            background-image: url('../../../static/img/beijing.jpg');
+
+        }
+
+        .logo_box {
+            width: 400px;
+            height: 500px;
+            padding: 35px;
+            color: wheat;
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            margin-left: 375px;
+            margin-top: -280px;
+            font-size: 20px;
+        }
+
+
+        .input_outer {
+            height: 46px;
+            padding: 0 5px;
+            margin-bottom: 30px;
+            border-radius: 50px;
+            position: relative;
+            border: 2px solid !important;
+        }
+
+        .u_user {
+            width: 25px;
+            height: 25px;
+            background: url(../../../static/img/zhanghao.jpeg);
+            background-position: -125px 0;
+            background-size: 30.66px;
+            position: absolute;
+            margin: 10px 13px;
+            opacity: 0.3;
+        }
+
+        .us_uer {
+            width: 25px;
+            height: 25px;
+            background-image: url(../../../static/img/mima.jpeg);
+            background-position: -125px -34px;
+            background-size: 30.66px;
+            position: absolute;
+            margin: 10px 13px;
+            opacity: 0.3;
+        }
+
+        .us1_uer {
+            width: 25px;
+            height: 25px;
+            background-image: url(../../../static/img/nickname.jpeg);
+            background-position: -125px -34px;
+            background-size: 30.66px;
+            position: absolute;
+            margin: 10px 13px;
+            opacity: 0.3;
+        }
+
+
+        .text {
+            width: 220px;
+            height: 46px;
+            outline: none;
+            display: inline-block;
+            font: 14px "microsoft yahei", Helvetica, Tahoma, Arial, "Microsoft jhengHei";
+            margin-left: 50px;
+            border: none;
+            background: none;
+            line-height: 46px;
+        }
+
+        .mb2 a {
+            text-decoration: none;
+            outline: none;
+        }
+
+        #rb {
+            width: 400px;
+            line-height: 40px;
+            font-size: 18px;
+            border-radius: 50px;
+            border-color: wheat;
+            background: scroll;
+        }
+
+
+        #err {
+            font-size: 22px;
+            color: black;
+            opacity: 0.8;
+
+        }
+
+        .total {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        #zhuce {
+            margin-left: 10%;
+        }
+
+        /*---底部栏---*/
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            color: #cccccc;
+            padding: 30px 0;
+            z-index: 1;
+        }
+
+        .bottom p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body class="total">
+<form action="/logreg/reg" method="post" id="from1">
+    {% csrf_token %}
+
+    <div class="container demo-1">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <div class="logo_box">
+                    <h3>eightlang欢迎你</h3>
+                    <div class="input_outer">
+                        <span class="u_user"></span>
+                        <input id="uname" name="uname" class="text" style="color: #FFFFFF !important" type="text"
+                               placeholder="请输入账号">
+                    </div>
+                    <div class="input_outer">
+                        <span class="us1_uer"></span>
+                        <input id="upass1" class="text"
+                               style="color: #FFFFFF !important; position:absolute; z-index:100;"
+                               name="nickname" type="text" placeholder="请输入昵称">
+                    </div>
+                    <div class="input_outer">
+                        <span class="us_uer"></span>
+                        <input id="upass" class="text"
+                               style="color: #FFFFFF !important; position:absolute; z-index:100;"
+                               name="passwd" type="password" placeholder="请输入密码">
+                    </div>
+                    <div class="input_outer">
+                        <span class="us_uer"></span>
+                        <input id="upass1" class="text"
+                               style="color: #FFFFFF !important; position:absolute; z-index:100;"
+                               name="passwd2" type="password" placeholder="请再次输入密码">
+                    </div>
+                    <div>
+                            <input type="submit" id="rb" style="color: #FFFFFF" value="注册">
+                    </div>
+                    <div>
+                        <button id="rb" style="color: #FFFFFF">
+                            <a target="_blank"  style="color: #FFFFFF;text-decoration: none" href="/">返回首页</a>
+                        </button>
+                    </div>
+                    <div id="err">
+                        {{ err }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- /container -->
+
+        <div class="bottom">
+        <p>
+            &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+        </p>
+    </div>
+    <script>
+        document.getElementById("rb").onclick = function () {
+            var result = prompt('请在下列输入验证结果：{{ num }}+{{ num1 }}*{{ num2 }}');
+            var s = {{ num }}+{{ num1 }} * {{ num2 }};
+            if (result == null) {
+                alert('验证失败');
+                document.getElementById('from1').reset();
+                window.location.reload()
+            } else if (result == s) {
+                alert('验证正确');
+                return 1
+            } else {
+                alert('验证失败');
+                document.getElementById('from1').reset();
+                window.location.reload();
+
+            }
+        }
+    </script>
+
+</form>
+</body>
+</html>

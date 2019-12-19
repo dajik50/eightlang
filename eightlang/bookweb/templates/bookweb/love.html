@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>言情</title>
+    <link rel="stylesheet" href="../../../static/css/bookweb_css/blog.css">
+    <script src="../../../static/js/bookweb_js/jquery.min.js"></script>
+    <script src="../../../static/js/bookweb_js/scrollReveal.js"></script>
+    <style>
+        #layer2{
+            padding-top: 40px;
+        }
+        #layer2 a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+{% include 'bookweb/header.html' %}
+<div id="layer2">
+    <div class="cleft">
+        {% for book in all_book %}
+        <div class="ccon">
+            <div class="cctip"><a target="_blank"  href="/bookstore/book_detail?name={{book.name}}">{{book.name}}</a></div>
+            <div class="ccframe">
+                <div>
+                    <a target="_blank"  href="/bookstore/book_detail?name={{book.name}}"><img src='../../../static/img/bookweb_img/{{book.imgs_src}}' width="300" alt=""></a>
+                </div>
+                <div class="ccright">
+                    <p>{{book.a_decs}}</p>
+                    <div class="info">{{book.read_number}}人已阅读</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    <div class="cright">
+        <h3>特别推荐</h3>
+        <div class="line"></div>
+        <div>
+            <img src='../../../static/img/bookweb_img/banner01.jpg' width="300" alt="">
+        </div>
+        <div>
+            <img src='../../../static/img/bookweb_img/banner02.jpg' width="300" alt="">
+        </div>
+        <div>
+            <img src='../../../static/img/bookweb_img/banner03.jpg' width="300" alt="">
+        </div>
+    </div>
+</div>
+{% include 'bookweb/bottom.html' %}
+<script src="../../../static/js/bookweb_js/index.js?1321"></script>
+<script>
+    //调用获取焦点的元素
+    getFocus($('#l2 a'))
+
+</script>
+</body>
+</html>

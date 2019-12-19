@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>战争</title>
+
+    <style type="text/css">
+        .total {
+            background: url("../../../static/img/movie_img/beijing1.jpg");
+            background-size: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        body {
+            font: 12px/180% "宋体", Arial, Helvetica, sans-serif;
+        }
+
+        .demopage {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        /* item */
+        .item {
+            width: 370px;
+            height: 220px;
+            border: 2px solid #000;
+            margin: 5px 5px 5px 0;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+
+        .item .caption {
+            width: 370px;
+            height: 220px;
+            background: url(../../../static/img/movie_img/5.jpg);
+            _background: #000000;
+            color: black;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            display: none;
+            opacity: 0.7;
+        }
+
+        .item .caption a {
+            text-decoration: none;
+            color: #0cc7dd;
+            font-size: 14px;
+            padding: 5px;
+            display: block;
+        }
+
+        .item .caption p a {
+            padding: 5px;
+            margin: 0;
+            font-size: 12px;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        .item img {
+            border: 0;
+            position: absolute;
+            width: 100%;
+            height: 220px;
+        }
+
+        .movie1 {
+            float: left;
+            margin-left: 200px;
+        }
+
+        .top {
+            height: 50px;
+            width: 100%;
+            top: 10px;
+            background: #727272;
+        }
+
+        .top li {
+            float: left;
+            padding-top: 12px;
+        }
+
+        .top .top2 {
+            position: relative;
+            padding-left: 90%;
+        }
+
+        .top .top1 li {
+            margin-right: 50px;
+        }
+
+        .top .top2 li {
+            margin-right: 20px;
+        }
+
+        .top li a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .top li a:hover {
+            background-color: blue;
+        }
+
+        #footer {
+            width: 100%;
+            background-color: #555;
+            color: #f1f1f1;
+            margin-top: 881px;
+        }
+
+        #footer p {
+            text-align: center;
+            width: 1140px;
+            margin: 0 auto;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        #footer p a:hover {
+            background-color: lemonchiffon;
+        }
+                /*---底部栏---*/
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            color: #cccccc;
+            padding: 30px 0;
+            z-index: 1;
+        }
+
+        .bottom p {
+            font-size: 18px;
+        }
+    </style>
+    <script type="text/javascript" src="../../../static/js/movie_js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //移动像素的图像
+            var move = -15;
+            //缩放比例，1.2 =120％
+            var zoom = 1.2;
+            //在对这些缩略图的鼠标滑过事件
+            $('.item').hover(function () {
+                //根据缩放百分比设置宽度和高度
+                width = $('.item').width() * zoom;
+                height = $('.item').height() * zoom;
+                //移动和缩放图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': width,
+                    'height': height,
+                    'top': move,
+                    'left': move
+                }, {duration: 200});
+                //显示标题
+                $(this).find('div.caption').stop(false, true).fadeIn(200);
+            }, function () {
+                //复位图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': $('.item').width(),
+                    'height': $('.item').height(),
+                    'top': '0',
+                    'left': '0'
+                }, {duration: 100});
+                //隐藏标题
+                $(this).find('div.caption').stop(false, true).fadeOut(200);
+            });
+        });
+    </script>
+
+
+</head>
+<body class="total">
+<div class="top">
+       <ul class="top1">
+        <li><a target="_blank"  href="/">首页</a></li>
+        <li><a target="_blank"  href="/movie">影视首页</a></li>
+        <li><a target="_blank"  href="/person">个人中心</a></li>
+        <li><a target="_blank"  href="/abus">关于我们</a></li>
+           <li><a target="_blank"  href="/person">{{nickname}}</a></li>
+    </ul>
+    <ul class="top2">
+        <li><a target="_blank"  href="/logreg/log">登录</a></li>
+        <li><a target="_blank"  href="/logreg/reg">注册</a></li>
+        <li><a target="_blank"  href="/quit">注销</a></li>
+    </ul>
+</div>
+<div class="demopage">
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/juezhan.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《决战中途岛》</a>
+                <p>
+                    中途岛战役于1942年——日本偷袭美国珍珠港事件半年之后在南太平洋爆发，美国海军在中途岛环礁成功击退日本帝国海军舰队的攻击，
+                    获得了太平洋战区的主动权，这场战役被历史学家视为战争的转折点。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/honghai.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《罗红海行动》</a>
+                <p>
+                    该片讲述了中国海军“蛟龙突击队”8人小组奉命执行撤侨任务，突击队兵分两路进行救援，但不幸遭到伏击，人员伤亡；同时在
+                    粉碎叛军武装首领的惊天阴谋中惨胜的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/maopai.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《冒牌上尉》</a>
+                <p>
+                    该片根据真实故事改编，讲述了一名十九岁的普通国防兵威利赫罗德在二战最后两周内成为所谓的“埃姆斯兰德刽子手”的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/guowang.jpg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《国王的选择》</a>
+                <p>
+                    影片讲述二战时期挪威国王面临德军入侵时所做出的艰难选择。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/hanwei.jpg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《捍卫者》</a>
+                <p>
+                    影片根据真实历史事件和人物故事改编，讲述的是抗日英烈姚子青在1937年中日的淞沪会战中，率六百壮士守卫战略要地上海宝山县，在
+                    敌众我寡，火力悬殊，装备落后的极端艰难困境中，与敌浴血鏖战七天七夜
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/longzhi.jpg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《龙之战》</a>
+                <p>
+                    讲述了1885年法军进攻越南凉山，萃帅冯子材率领广西狼兵顽强抗击法军，最终取得胜利的英雄故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/anna.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《安娜的战争》</a>
+                <p>
+                    1941年，在乌克兰的纳粹占领区，年仅6岁的犹太女孩安娜在一场纳粹屠杀中奇迹般地幸存，但却成为孤儿。在接下来的几百天中，她一
+                    直藏身于纳粹指挥官办公室废弃的壁炉烟道里，经历生命的极端考验，等待光明和自由。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/junquan.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《军犬瑞克斯》</a>
+                <p>
+                    讲述了在伊拉克战争背景下，海军陆战队下士梅根·利维和她的军犬瑞克斯一起拯救了多人生命的故事。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/nvjuji.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《女狙击手》</a>
+                <p>
+                    该片于2015年4月2日在俄罗斯上映。该片取材于苏联女英雄、神枪手柳德米拉·米哈伊尔洛夫娜·帕夫利琴科的部分生平，讲述了苏联
+                    女学生柳德米拉·帕夫利琴科在战争爆发后中断学业，参军奔赴前线，并在克里米亚半岛的塞瓦斯托波尔书写了二战史上一段不朽的传奇故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/dilei.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《地雷区》</a>
+                <p>
+                    该片主要讲述了1945年5月德国纳粹投降之后，一群年轻的德军俘虏被交给丹麦当局，他们被送往西海岸在丹麦军官卡尔·莱奥
+                    博德·拉斯穆森的率领下，开始了极其危险的排雷工作。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/jiandie.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《间谍同盟》</a>
+                <p>
+                    讲述了英国特工麦克斯与法国间谍玛丽安在刺杀德国大使任务中坠入爱河，从而上演一段荡气回肠的爱情故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/yisierba.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《1428》</a>
+                <p>
+                    四个阿拉伯数字指地震爆发具体时间，即2008年5月12日14 :28。2008年11月6日，中国政府宣布，将斥资一万亿元（约1465亿美元）
+                    在未来三年内重建灾区。 他在去年汶川发生地震后赶赴灾区，感受到灾难的悲痛，也目睹了诸多荒诞场景，因此用两个月的时间拍摄了这
+                    部电影。他采用多线条、全景加具体叙事的方式，聚焦汶川大地震后灾民的生活。
+                </p>
+            </div>
+        </div>
+    </div>
+       <div class="bottom">
+        <p>
+            &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+        </p>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

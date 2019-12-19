@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="scp">留言成功！还有<span id="sp">5</span>秒跳转到之前界面...</p>
+{% include 'bookweb/bottom.html' %}
+<script>
+    onload=function () {
+        setInterval(go,1000)
+    };
+    var x=4;
+    function go() {
+
+        if (x>=0){
+            document.getElementById("sp").innerText=x;
+        }else {
+            history.back(-1);
+        }
+        x--;
+    }
+</script>
+</body>
+</html>

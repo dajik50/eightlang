@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书详情</title>
+    <link rel="stylesheet" href="../../../static/css/bookweb_css/blog.css">
+    <script src="../../../static/js/bookweb_js/jquery.min.js"></script>
+    <script src="../../../static/js/bookweb_js/scrollReveal.js"></script>
+    <script src="../../../static/js/bookweb_js/index.js"></script>
+    <style>
+        #detail {
+            height: 900px;
+        }
+
+        #detail .img {
+            position: absolute;
+            left: 500px;
+            top: 240px;
+        }
+
+        #detail .desc {
+            position: absolute;
+            left: 800px;
+            top: 240px;
+            padding-bottom: 30px;
+        }
+
+        #detail a {
+            color:#444444;
+            font-size: 50px;
+        }
+
+        #detail p {
+            font-size: 20px;
+        }
+
+        #detail h3 {
+            font-size: 30px;
+        }
+
+        #detail a {
+            margin-right: 50px;
+        }
+
+        #detail ul li {
+            width: 300px;
+            height: 100px;
+            font-size: 20px;
+        }
+
+        #detail ul {
+            margin-bottom: 20px;
+        }
+      #err{
+            position: absolute;
+            left: 690px;
+            top: 500px;
+
+        }
+        #err:hover{
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+{% include 'bookweb/header.html' %}
+<div id="detail">
+    {% if tmp %}
+    {% for book in one_book %}
+    <div class="img">
+        <img src="../../../static/img/bookweb_img/{{book.imgs_src}}" alt="">
+    </div>
+    <div class="desc">
+
+        {% if result_url %}
+        <h3>{{book.name}}<a target="_blank" href="{{result_url}}">点此阅读</a></h3>
+        {% else %}
+        <h3>{{book.name}}&nbsp;&nbsp;&nbsp;&nbsp;无数据无法阅读</h3>
+        {% endif %}
+        <br>
+        <ul>
+            <br>
+            <li>作者:{{author_name}}</li>
+            <br>
+            <li>简介:{{book.a_decs}}</li>
+            <br>
+        </ul>
+        <a target="_blank" target="_blank"href="#">点赞</a><a target="_blank" href="/bookstore/dianzancg?name={{book.name}}">{{book.stow_number}}收藏</a>
+        {% endfor %}
+      {% else %}
+        <ul id="err">
+            <a target="_blank" href={{ err }} style="font-size: 30px">没有找到这本书(点击返回图书社区)</a>
+        </ul>
+     {% endif %}
+    </div>
+</div>
+{% include 'bookweb/bottom.html' %}
+</body>
+</html>

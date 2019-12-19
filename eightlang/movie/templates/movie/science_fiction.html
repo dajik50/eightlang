@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>科幻</title>
+
+    <style type="text/css">
+        .total {
+            background: url("../../../static/img/movie_img/beijing1.jpg");
+            background-size: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        body {
+            font: 12px/180% "宋体", Arial, Helvetica, sans-serif;
+        }
+
+        .demopage {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        /* item */
+        .item {
+            width: 370px;
+            height: 220px;
+            border: 2px solid #000;
+            margin: 5px 5px 5px 0;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+
+        .item .caption {
+            width: 370px;
+            height: 220px;
+            background: url(../../../static/img/movie_img/5.jpg);
+            _background: #000000;
+            color: black;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            display: none;
+            opacity: 0.7;
+        }
+
+        .item .caption a {
+            text-decoration: none;
+            color: #0cc7dd;
+            font-size: 14px;
+            padding: 5px;
+            display: block;
+        }
+
+        .item .caption p a {
+            padding: 5px;
+            margin: 0;
+            font-size: 12px;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        .item img {
+            border: 0;
+            position: absolute;
+            width: 100%;
+            height: 220px;
+        }
+
+        .movie1 {
+            float: left;
+            margin-left: 200px;
+        }
+
+        .top {
+            height: 50px;
+            width: 100%;
+            top: 10px;
+            background: #727272;
+        }
+
+        .top li {
+            float: left;
+            padding-top: 12px;
+        }
+
+        .top .top2 {
+            position: relative;
+            padding-left: 90%;
+        }
+
+        .top .top1 li {
+            margin-right: 50px;
+        }
+
+        .top .top2 li {
+            margin-right: 20px;
+        }
+
+        .top li a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .top li a:hover {
+            background-color: blue;
+        }
+
+        #footer {
+            width: 100%;
+            background-color: #555;
+            color: #f1f1f1;
+            margin-top: 881px;
+        }
+
+        #footer p {
+            text-align: center;
+            width: 1140px;
+            margin: 0 auto;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        #footer p a:hover {
+            background-color: lemonchiffon;
+        }
+
+        /*---底部栏---*/
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            color: #cccccc;
+            padding: 30px 0;
+            z-index: 1;
+        }
+
+        .bottom p {
+            font-size: 18px;
+        }
+    </style>
+    <script type="text/javascript" src="../../../static/js/movie_js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //移动像素的图像
+            var move = -15;
+            //缩放比例，1.2 =120％
+            var zoom = 1.2;
+            //在对这些缩略图的鼠标滑过事件
+            $('.item').hover(function () {
+                //根据缩放百分比设置宽度和高度
+                width = $('.item').width() * zoom;
+                height = $('.item').height() * zoom;
+                //移动和缩放图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': width,
+                    'height': height,
+                    'top': move,
+                    'left': move
+                }, {duration: 200});
+                //显示标题
+                $(this).find('div.caption').stop(false, true).fadeIn(200);
+            }, function () {
+                //复位图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': $('.item').width(),
+                    'height': $('.item').height(),
+                    'top': '0',
+                    'left': '0'
+                }, {duration: 100});
+                //隐藏标题
+                $(this).find('div.caption').stop(false, true).fadeOut(200);
+            });
+        });
+    </script>
+
+
+</head>
+<body class="total">
+<div class="top">
+    <ul class="top1">
+        <li><a target="_blank"  target="_blank"  href="/">首页</a></li>
+        <li><a target="_blank"  target="_blank"  href="/movie">影视首页</a></li>
+        <li><a target="_blank"  target="_blank"  href="/person">个人中心</a></li>
+        <li><a target="_blank"  target="_blank"  href="/abus">关于我们</a></li>
+        <li><a target="_blank"  target="_blank"  href="/person">{{nickname}}</a></li>
+    </ul>
+    <ul class="top2">
+        <li><a target="_blank"  target="_blank"  href="/logreg/log">登录</a></li>
+        <li><a target="_blank"  target="_blank"  href="/logreg/reg">注册</a></li>
+        <li><a target="_blank"  target="_blank"  href="/quit">注销</a></li>
+    </ul>
+    v
+</div>
+<div class="demopage">
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/haiwang.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《海王》</a>
+                <p>
+                    海王》根据DC漫画改编，讲述了半人半亚特兰蒂斯血统的亚瑟·库瑞踏上永生难忘的征途——他不但需要直面自己的特殊身世，更不得不
+                    面对生而为王的考验，以及和湄拉一同对抗同母异父的兄弟奥姆的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/alita.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《阿丽塔：战斗天使》</a>
+                <p>
+                    该片于2019年2月14日在美国上映，于2019年2月22日在中国内地上映。《阿丽塔：战斗天使》根据日本漫画家木城雪户的小说《铳梦》
+                    改编，影片故事背景设定在在26世纪，讲述了身处末世，幸运重生的机械女孩为了改变世界而勇敢奋斗、踏上探索真 ...
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/touhao.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《头号玩家》</a>
+                <p>
+                    故事发生在2045年，虚拟现实技术已经渗透到了人类生活的每一个角落。詹姆斯哈利迪（马克·里朗斯 Mark Rylance 饰）一手建造了
+                    名为“绿洲”的虚拟现实游戏世界，临终前，他宣布自己在游戏中设置了一个彩蛋，找到这枚彩蛋的人即可成为绿洲的继承人。要找到这枚
+                    彩蛋，必须先获得三把钥匙，而寻找钥匙的线索就隐藏在詹姆斯的过往之中
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/xingqiu.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《猩猿崛起》</a>
+                <p>
+                    猩猿崛起》是2011年上映的动作类电影，由鲁伯特·瓦耶特执导，詹姆斯·弗兰科、安迪·瑟金斯主演。讲述了人猿进化为高级智慧生物、
+                    进而攻占地球之前的种种际遇的故事。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/huoxing.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《火星救援》</a>
+                <p>
+                    该片根据安迪·威尔的同名小说改编，讲述了由于一场沙尘暴，马克与他的团队失联，孤身一人置身于火星面临着飞船损毁，想方设法回
+                    地球的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/yidong.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《移动迷宫》</a>
+                <p>
+                    影片内容改编自詹姆斯·达什纳撰写的“反乌托邦科幻三部曲”的第一本同名小说，讲述男孩托马斯醒来时发现自己身处一个巨石组成的巨大
+                    迷宫中，他只记得自己的名字，和他一样在这个迷宫中的还有一些同样不记得自己 ...
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/sishi.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《死侍》</a>
+                <p>
+                    该片是《X战警》系列电影的外传。讲述了前任特种兵韦德·威尔逊得了癌症，为了治疗被不知名的组织绑架，用来测试变种人基因。在饱
+                    受虐待折磨后他成功逃脱并对把他变成变种人的阿贾克斯进行报复的故事。该片已于2016年2月12日在北美上映。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/zhuluoji.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《侏罗纪世界》</a>
+                <p>
+                    《侏罗纪世界》讲述科学家欧文在纳布拉尔岛上的恐龙主题公园中与迅猛龙们打成一片，并意外发生了一些事故和故事。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/heibao.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《黑豹》</a>
+                <p>
+                    影片根据漫威漫画改编，故事背景承接于《美国队长3：内战》，讲述了黑豹回到了瓦坎达担任国王，然而当过去的敌人再次出现，他被
+                    卷入一场正邪大战当中的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/chaoti.jpg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《超体》</a>
+                <p>
+                    超体》讲述一个年轻女人被迫变成毒贩，然后这种毒品倾入她自己身体，反而给了她超于常人的力量：包括心灵感应、瞬间吸收知识
+                    等技能，让其成为一名无所不能的“女超人”。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/gesila.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《哥斯拉》</a>
+                <p>
+                    电影由亚伦·泰勒-约翰逊、渡边谦、伊丽莎白·奥尔森、朱丽叶·比诺什、莎莉·霍金斯、大卫·斯特雷泽恩、布莱恩·克兰斯顿等主演
+                    电影重塑日本哥斯拉“可怕的自然力量”形象
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/huantaiping.jpg"/>
+            <div class="caption">
+                <a target="_blank"  target="_blank"  href="">《环太平洋》</a>
+                <p>
+                    环太平洋》是吉尔莫·德尔·托罗执导的一部美国科幻电影，由查理·汉纳姆、 伊德瑞斯·艾尔巴、菊地凛子、查理·戴等人主演，于2013
+                    年7月12日在美国上映。该片主要讲述了人类为了抵抗怪兽的进攻，研制出了高大的机器战士与来犯怪兽进行对抗的故事。
+                </p>
+            </div>
+        </div>
+    </div>
+       <div class="bottom">
+        <p>
+            &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+        </p>
+    </div>
+
+
+</div>
+
+</body>
+</html>

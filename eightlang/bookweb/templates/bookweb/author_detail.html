@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作者详情</title>
+    <link rel="stylesheet" href="../../../static/css/blog.css">
+    <script src="../../../static/js/jquery.min.js"></script>
+    <script src="../../../static/js/scrollReveal.js"></script>
+    <script src="../../../static/js/index.js"></script>
+    <style>
+        #detail {
+            position: absolute;
+            left: 600px;
+            top: 100px;
+            background-color: white;
+            border: 10px solid white;
+            text-align: center;
+        }
+        #detail h3{
+            font-size: 30px;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+{% include 'bookweb/header.html' %}
+<div id="detail">
+    {% for book in author_book %}
+    <div class="img">
+        <img src="../../../static/img/bookweb_img/{{book.imgs_src}}" alt="">
+    </div>
+    <div class="desc">
+
+        <h3>《{{book.name}}》</h3>
+        <br>
+        <ul>
+            <br>
+            <li>作者:{{author_name}}</li>
+            <br>
+            <li>作者简介:{{author_content}}</li>
+            <br>
+            <li>作品简介:{{book.a_decs}}</li>
+            <br>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>

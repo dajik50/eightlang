@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        <title>{{ name }}美食</title>
+    {% endblock %}
+    <link rel="stylesheet" href="../../../static/css/food_css/index.css" type="text/css">
+</head>
+<body>
+<div id="d1">
+    <div>
+        <ul id="nav">
+            <li><a target="_blank"  href="/food/kind?name=川菜" title="川菜">川菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=鲁菜" title="鲁菜">鲁菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=粤菜" title="粤菜">粤菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=苏菜" title="苏菜">苏菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=浙菜" title="浙菜">浙菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=闽菜" title="闽菜">闽菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=湘菜" title="湘菜">湘菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=徽菜" title="徽菜">徽菜</a></li>
+            <li>
+                <form action="/food/search" method="post">
+                    {% csrf_token %}
+                    <input type="search" placeholder="请输入菜名" name="search">
+                    <button type="submit">搜索</button>
+                </form>
+            </li>
+            <li><a target="_blank"  href="/" title="首页">首页</a></li>
+            <li><a target="_blank"  href="/person" title="个人中心">个人中心</a></li>
+            <li><a target="_blank"  href="/abus" title="关于我们">关于我们</a></li>
+            <li><a target="_blank"  href="/food/liuyan">留言区</a></li>
+            <li><a target="_blank"  href="/logreg/log" >登录</a></li>
+            <li><a target="_blank"  href="/logreg/reg" >注册</a></li>
+            <li><a target="_blank"  href="/quit" >注销</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <div id="d2">{{ name }}：新菜谱</div>
+    <div id="container">
+        <div id="front">
+            {% for item in new_food %}
+                <a target="_blank"  href="/food/zym?name={{ item.name }}"><img
+                        src="../../../static/img/food_img/{{ item.food_kind }}image/{{ item.image_name }}" alt="" width="250px"
+                        height="300px"></a>
+            {% endfor %}
+        </div>
+        <div id="back"><img src="../../../static/img/food_img/川菜image/7.jpg" alt=""></div>
+    </div>
+    <div id="img1">
+        <div id="d3">本周最佳菜肴排行榜</div>
+        <div class="s1">
+            {% for item in first_four_food_list %}
+                <span id="s1">
+
+                <a target="_blank"  href="/food/zym?name={{ item.name }}" title={{ item.name }}><img
+                        src="../../../static/img/food_img/{{ item.food_kind }}image/{{ item.image_name }}" width="250px" height="300px"
+                        alt=""></a>
+                <span id="p1">
+                    {{ item.name }}
+                    <br>
+                    <br>
+                    <a target="_blank"  href="/food/good_next?kind={{ item.food_kind }}&name={{ item.name }}"
+                       id="a1">点赞：{{ item.point }}</a>
+                </span>
+
+            </span>
+            {% endfor %}
+
+        </div>
+        <div class="s1">
+            {% for item in late_four_food_list %}
+                <span id="s1">
+
+                <a target="_blank"  href="/food/zym?name={{ item.name }}" title={{ item.name }}><img
+                        src="../../../static/img/food_img/{{ item.food_kind }}image/{{ item.image_name }}" width="250px" height="300px"
+                        alt=""></a>
+                <span id="p1">
+                    {{ item.name }}
+                    <br>
+                    <br>
+                    <a target="_blank"  href="/food/good_next?kind={{ item.food_kind }}&name={{ item.name }}"
+                       id="a1">点赞：{{ item.point }}</a>
+                </span>
+
+            </span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    front.style = "position:relative;left:0px;";
+    back.style = "position:relative;left:0px;";
+    setInterval(moveimg, 100);
+    var fleft, bleft;
+
+    function moveimg() {
+        fleft = parseInt(front.style.left);
+        bleft = parseInt(back.style.left);
+        if (fleft == -1600) {
+            front.style.left = 400 + "px";
+            fleft = parseInt(front.style.left);
+        }
+        if (bleft == -2000) {
+            back.style.left = 0 + "px";
+            bleft = parseInt(back.style.left);
+        }
+        front.style.left = (fleft - 10) + "px";
+        back.style.left = (bleft - 10) + "px";
+    }
+</script>
+</html>

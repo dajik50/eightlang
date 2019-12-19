@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{name}}收藏成功</title>
+    <link rel="stylesheet" href="../../../static/css/bookweb_css/blog.css">
+    <script src="../../../static/js/bookweb_js/jquery.min.js"></script>
+    <script src="../../../static/js/bookweb_js/scrollReveal.js"></script>
+    <script src="../../../static/js/bookweb_js/index.js"></script>
+    <style>
+        #scp{
+            position: absolute;
+            font-size: 30px;
+            width: 500px;
+            height: 30px;
+            left: 700px;
+            top: 450px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<p id="scp">收藏成功！还有<span id="sp">3</span>秒跳转到之前界面...</p>
+{% include 'bookweb/bottom.html' %}
+<script>
+    onload=function () {
+        setInterval(go,1000)
+    };
+    var x=2;
+    function go() {
+
+        if (x>=0){
+            document.getElementById("sp").innerText=x;
+        }else {
+            location.href="/bookstore/book_detail?name={{name}}";
+        }
+        x--;
+    }
+</script>
+</body>
+</html>

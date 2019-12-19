@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <title>登陆界面</title>
+    <style>
+        .large-header {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center center;
+            z-index: 1;
+        }
+
+        .demo-1 .large-header {
+
+            background-image: url('../../../static/img/setting.jpg');
+
+        }
+
+        .logo_box {
+            width: 400px;
+            height: 500px;
+            padding: 35px;
+            color: wheat;
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            margin-left: -250px;
+            margin-top: -200px;
+            font-size: 20px;
+        }
+
+
+        .input_outer {
+            height: 46px;
+            padding: 0 5px;
+            margin-bottom: 30px;
+            border-radius: 50px;
+            position: relative;
+            border: 2px solid !important;
+        }
+
+        .u_user {
+            width: 25px;
+            height: 25px;
+            background: url(../../../static/img/zhanghao.jpeg);
+            background-position: -125px 0;
+            background-size: 30.66px;
+            position: absolute;
+            margin: 10px 13px;
+            opacity: 0.3;
+        }
+
+        .us_uer {
+            width: 25px;
+            height: 25px;
+            background-image: url(../../../static/img/mima.jpeg);
+            background-position: -125px -34px;
+            background-size: 30.66px;
+            position: absolute;
+            margin: 10px 13px;
+            opacity: 0.3;
+        }
+
+
+        .text {
+            width: 220px;
+            height: 46px;
+            outline: none;
+            display: inline-block;
+            font: 14px "microsoft yahei", Helvetica, Tahoma, Arial, "Microsoft jhengHei";
+            margin-left: 50px;
+            border: none;
+            background: none;
+            line-height: 46px;
+        }
+
+        .mb2 a {
+            text-decoration: none;
+            outline: none;
+        }
+
+
+        #err {
+            font-size: 18px;
+            color: wheat;
+
+        }
+
+        #lb1 {
+            width: 400px;
+            line-height: 40px;
+            font-size: 15px;
+            border-radius: 50px;
+            border-color: wheat;
+            background: scroll;
+        }
+
+        .lb2 {
+            width: 400px;
+            line-height: 40px;
+            font-size: 15px;
+            border-radius: 50px;
+            background: scroll;
+            border-color: wheat;
+
+
+        }
+
+
+        .total {
+            padding: 0;
+            margin: 0;
+        }
+
+        /*---底部栏---*/
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            color: #cccccc;
+            padding: 30px 0;
+            z-index: 1;
+        }
+
+        .bottom p {
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+<body class="total">
+<form action="/person/setting" method="post" id="from1">
+    {% csrf_token %}
+    <div class="container demo-1">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+                <div class="logo_box">
+                    <h3>个人设置中心</h3>
+                    <div class="input_outer">
+                        <span class="u_user"></span>
+                        <input id="uname" class="text" style="color: #FFFFFF !important" type="text" name="nickname"
+                               placeholder="输入你要修改的昵称">
+                    </div>
+                    <div class="input_outer">
+                        <span class="us_uer"></span>
+                        <input id="password" class="text"
+                               style="color: #FFFFFF !important; position:absolute; z-index:100;"
+                               value="" type="password" placeholder="请输入你要修改的密码" name="passwd">
+                    </div>
+                    <div class="input_outer">
+                        <span class="us_uer"></span>
+                        <input id="password" class="text"
+                               style="color: #FFFFFF !important; position:absolute; z-index:100;"
+                               value="" type="password" placeholder="请确认你要修改的密码" name="passwd1">
+                    </div>
+                    <div>
+                        <input id="lb1" style="color: #FFFFFF" type="submit" value="确认修改">
+                    </div>
+
+                    <div>
+                        <button class="lb2" style="color: #FFFFFF">返回个人首页<a target="_blank"  href="/person" style="opacity: 0"></a>
+                        </button>
+                    </div>
+
+                    <div>
+                        <input type="reset" id="res" style="opacity: 0;">
+
+                    </div>
+                    <div id="err">
+                        {{ err }}
+                    </div>
+
+                </div>
+                <div class="bottom">
+                    
+                    <p>
+                        &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>汽车社区</title>
+    <link rel="stylesheet" href="../../../static/css/car_css/car.css">
+</head>
+<body>
+
+<div class="top">
+    <div id="con">
+        <div id="wel">
+            欢迎来到EightLang汽车社区
+        </div>
+
+        <div id="log">
+             <a target="_blank"  href="/quit">｜注销</a>
+            <a target="_blank"  href="/logreg/reg">注册</a>
+            <a target="_blank"  href="/logreg/log">登录｜</a>
+
+        </div>
+
+        <ul>
+            <li id="l1"><a target="_blank"  href="/">首页</a></li>
+            <li id="l4"><a target="_blank"  href="/car/liuyan">留言区</a></li>
+            <li id="l6"><a target="_blank"  href="/abus">关于我们</a></li>
+            <li id="l3"><a target="_blank"  href="">{{nickename}}</a></li>
+
+        </ul>
+
+    </div>
+</div>
+
+
+<div id="car_img">
+
+    <img src="../../../static/img/car_img/h5.jpg" alt="">
+
+</div>
+
+
+<div id="middle">
+
+    <!--- 中间左边部分 --->
+    <div id="left">
+        <div id="left_top">
+            <div id="touxiang">
+                <img src="" alt="">
+            </div>
+            <div id="xiangqing">
+                <a target="_blank"  href="">
+                    <p id="p1">个人主页</p>
+                </a>
+                <a target="_blank"  href="">
+                    <p>E龄:{{ age }}</p>
+                </a>
+                <a target="_blank"  href="">
+                    <p>发表文章数:{{ title_number }}</p>
+                </a>
+                <a target="_blank"  href="">
+                    <p>粉丝:{{ fans }}</p>
+                </a>
+                <a target="_blank"  href="">
+                    <p>关注:{{ follows }}</p>
+                </a>
+            </div>
+
+        </div>
+
+
+        <div id="left_bottom">
+            <p>为您推荐</p>
+            <div class="love">
+                <div class="love-img">
+                    <a target="_blank"  href="">
+                        <img src="../../../static/img/car_img/car_sign.jpg" alt="">
+                        <div class="love-title">
+                            汽车标志大全
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <hr>
+            <div class="love">
+                <div class="love-img">
+                    <a target="_blank"  href="">
+                        <img src="../../../static/img/car_img/new_car.png" alt="">
+
+                        <div class="love-title">
+                            新车上市
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <hr>
+            <div class="love">
+                <div class="love-img">
+                    <a target="_blank"  href="">
+                        <img src="../../../static/img/car_img/history_car.jpeg" alt="">
+                        <div class="love-title">
+                            汽车历史
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--- 中间右边部分 -->
+    <div id="right">
+        <!--- https://www.pcauto.com.cn/zt/chebiao/ 齐全的车标 --->
+        <div id="right_navigation">
+
+            <div id="bsj_car">
+                <a target="_blank"  href="">
+                    <img src="../../../static/img/car_img/bsj.jpg" alt="">
+                </a>
+            </div>
+            <div id="car_sign_describe">
+                举世熟知的porsche盾徽，是1953年由费利。保时捷博士(dr.feny porsche)所构思。跃动的黑马象征porsche惊人的爆发力，正中央stuttgart字样，代表保时捷公司的所在地...
+            </div>
+
+        </div>
+        <hr>
+        <div id="right_top">
+            <div id="car_top">
+                <a target="_blank"  href="">
+                    <img src="../../../static/img/car_img/bmw_car.jpg" alt="">
+                </a>
+            </div>
+            <div id="desc_top">
+
+                何须追随世人的风向，全新BMW X6就风格的主宰。于张扬设计中融入遒劲比例，与BMW 个性化定制黑色高光饰条相得益彰，无需刻意显露，却早已令世人倾慕。在落日余晖的映射下，炫影光幕格栅划破暮色，22英寸车轮以傲然之势平步峥嵘，即使最理智的脉搏也无法对抗这份狂野和炙热。由外至内，尊崇质感和以驾驶者为中心的理念贯穿始终，精心鞣制车内空间凝聚创新与巧思，让您一路纵享悠然驰骋。
+
+            </div>
+        </div>
+        <hr>
+        <div id="right_mid">
+            <div id="car_mid">
+                <a target="_blank"  href="">
+                    <img src="../../../static/img/car_img/car_mash.png" alt="">
+                </a>
+            </div>
+            <div id="desc_mid">
+
+                华丽优雅，尽显玛莎拉蒂家族式特征。Ghibli具备独特的玛莎拉蒂DNA—将双门轿跑车的性能与高级轿车的华丽风格相结合—无论距离如何，都具备振奋人心的驾驶体验。
+
+            </div>
+        </div>
+        <hr>
+        <div id="right_bottom">
+            <div id="car_bottom">
+                <a target="_blank"  href="">
+                    <img src="../../../static/img/car_img/car_royals.jpg" alt="">
+                </a>
+            </div>
+            <div id="desc_bottom">
+
+                这是一款继承了劳斯莱斯传统，但又与众不同的车型。朝阳初升，一个全新轮廓赫然显现。受20世纪50年代的代表性车型“Silver  Dawn”的启发，曜影（Dawn）将高端的技术和真正的自由融为一体。这款充满朝气与活力、动感十足的汽车，在动力与奢华之间达到绝妙的平衡，代表着一个崭新的开始。曜影采用精妙的设计，给人以变幻莫测之感，实现与环境的美妙契合。只需轻松开启车门，无限可能即在眼前。唤醒您的感官，捕捉每个精彩瞬间，与您的朋友共享曜影的悠然时光，享受当下。
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- 底部 -->
+<div class="bottom">
+    <hr>
+    <p>
+        &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+    </p>
+</div>
+
+
+</body>
+</html>

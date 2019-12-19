@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>恐怖</title>
+
+    <style type="text/css">
+        .total {
+            background: url("../../../static/img/movie_img/beijing1.jpg");
+            background-size: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        body {
+            font: 12px/180% "宋体", Arial, Helvetica, sans-serif;
+        }
+
+        .demopage {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        /* item */
+        .item {
+            width: 370px;
+            height: 220px;
+            border: 2px solid #000;
+            margin: 5px 5px 5px 0;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+
+        .item .caption {
+            width: 370px;
+            height: 220px;
+            background: url(../../../static/img/movie_img/5.jpg);
+            _background: #000000;
+            color: black;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            display: none;
+            opacity: 0.7;
+        }
+
+        .item .caption a {
+            text-decoration: none;
+            color: #0cc7dd;
+            font-size: 14px;
+            padding: 5px;
+            display: block;
+        }
+
+        .item .caption p a {
+            padding: 5px;
+            margin: 0;
+            font-size: 12px;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        .item img {
+            border: 0;
+            position: absolute;
+            width: 100%;
+            height: 220px;
+        }
+
+        .movie1 {
+            float: left;
+            margin-left: 200px;
+        }
+
+        .top {
+            height: 50px;
+            width: 100%;
+            top: 10px;
+            background: #727272;
+        }
+
+        .top li {
+            float: left;
+            padding-top: 12px;
+        }
+
+        .top .top2 {
+            position: relative;
+            padding-left: 90%;
+        }
+
+        .top .top1 li {
+            margin-right: 50px;
+        }
+
+        .top .top2 li {
+            margin-right: 20px;
+        }
+
+        .top li a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .top li a:hover {
+            background-color: blue;
+        }
+
+
+        #footer p {
+            text-align: center;
+            width: 1140px;
+            margin: 0 auto;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        #footer p a:hover {
+            background-color: lemonchiffon;
+        }
+                /*---底部栏---*/
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            text-align: center;
+            color: #cccccc;
+            padding: 30px 0;
+            z-index: 1;
+        }
+
+        .bottom p {
+            font-size: 18px;
+        }
+    </style>
+    <script type="text/javascript" src="../../../static/js/movie_js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //移动像素的图像
+            var move = -15;
+            //缩放比例，1.2 =120％
+            var zoom = 1.2;
+            //在对这些缩略图的鼠标滑过事件
+            $('.item').hover(function () {
+                //根据缩放百分比设置宽度和高度
+                width = $('.item').width() * zoom;
+                height = $('.item').height() * zoom;
+                //移动和缩放图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': width,
+                    'height': height,
+                    'top': move,
+                    'left': move
+                }, {duration: 200});
+                //显示标题
+                $(this).find('div.caption').stop(false, true).fadeIn(200);
+            }, function () {
+                //复位图像
+                $(this).find('img').stop(false, true).animate({
+                    'width': $('.item').width(),
+                    'height': $('.item').height(),
+                    'top': '0',
+                    'left': '0'
+                }, {duration: 100});
+                //隐藏标题
+                $(this).find('div.caption').stop(false, true).fadeOut(200);
+            });
+        });
+    </script>
+
+
+</head>
+<body class="total">
+<div class="top">
+      <ul class="top1">
+        <li><a target="_blank"  href="/">首页</a></li>
+        <li><a target="_blank"  href="/movie">影视首页</a></li>
+        <li><a target="_blank"  href="/person">个人中心</a></li>
+        <li><a target="_blank"  href="">关于我们</a></li>
+    </ul>
+    <ul class="top2">
+        <li><a target="_blank"  href="/logreg/log">登录</a></li>
+        <li><a target="_blank"  href="/logreg/reg">注册</a></li>
+        <li><a target="_blank"  href="/quit">注销</a></li>
+    </ul>
+</div>
+<div class="demopage">
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/taochu.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《逃出绝命镇》</a>
+                <p>
+                    该片讲述了黑人小伙子克里斯与白人女友露丝在相处阶段时，发现了自己落入了一个邪恶的种族阴谋当中的故事。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/xiaochou.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《小丑回魂》</a>
+                <p>
+                    989年，位于缅因州的德里市，正被恐怖的阴影所笼罩。从上一年开始，儿童失踪案接连发生，似乎某个可怕的未知存在悄然来到了人们
+                    中间。痛失弟弟的少年比利（杰顿·李博赫 Jaeden Lieberher 饰），决定和艾迪、瑞奇、史丹利等伙伴利用暑假寻找弟弟乔治的下落。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/yichuan.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《遗传厄运》</a>
+                <p>
+                    讲述了母亲艾伦去世后，安妮家庭中陷入一系列厄运遗传的恐怖事件故事 [2] 。2019年1月，《遗传厄运》荣获在线影评人协会2018
+                    年年度最佳影片，托妮·科莱特凭借《遗传厄运》荣获在线影评人协会2018年年度最佳女主角。阿里·艾斯特凭借《遗传厄运》荣获最佳处
+                    女作。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/dengta.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《灯塔》</a>
+                <p>
+                    影片设定在19世纪神秘的新英格兰岛上，围绕两名灯塔看守人展开，讲述了两个人为了看守梅恩海峡的一座灯塔，被困在一个充满危险
+                    的小岛上的故事。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/jisheng.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《夏寄生兽》</a>
+                <p>
+                    影片讲述了泉新一是被寄生生物寄生的人类，寄生在他体内的生物“MIGI”并没有吃掉他的脑，而是取代了他的右手。而泉新一为了被寄生
+                    兽杀死的亲友以及所有人类的未来，开始了一系列与其他完全体寄生兽的殊死搏斗。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/zhubu.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《足不出户》</a>
+                <p>
+                    足不出户》是一部新西兰电影，由Gerard Johnstone自编自导，Morgana O'Reilly主演。影片于2014年3月10日上映。
+                    讲述吸毒成瘾凯莉·巴克奈尔被法官判处家中监禁八个月后遭遇的灵异事件。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/linzhong.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《林中小屋》</a>
+                <p>
+                    该片讲述了五名好友驱车前往位于深山老林的小木屋中度假，却莫名其妙掉入一个神秘的圈套中 。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/jiangshi.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《僵尸世界大战》</a>
+                <p>
+                    片改编自马克斯·布鲁克斯的同名小说，讲述了丧尸病毒大爆发后，少数幸存者集体面临绝境求生的灾难故事。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="movie1">
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/zhaohun.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《招魂》</a>
+                <p>
+                    该片讲述了佩龙一家1971年搬进了一栋他们朝思暮想的房子里，房子座落在田园风光的罗德岛上，风景优美。然而一系列惊悚的事情接
+                    连发生，家里狗的离奇死亡，半夜孩子们被吓醒呼救。这栋房子变成他们的噩梦，十年后，每个人都变得魂不守舍，最终决定搬离罗德岛。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/wennuan.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《血肉之躯》</a>
+                <p>
+                    他（尼古拉斯·霍尔特 Nicholas Hoult 饰）是一只生活在末世的僵尸，依稀只记得自己的名字里有个“R”。与世俗观念不同，作为
+                    僵尸他能够思考，依旧残存着些许生前记忆。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/wangling.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《亡灵》</a>
+                <p>
+                    影片讲述了Bart必须要定期饮血才能活下去。他们相信没人会对那些把洛杉矶变成暴力横行污秽不堪的毒贩和杀人犯有怜悯之心，因此
+                    这两个朋友决定替天行道，开始大开杀戒，同时还能满足Bart的嗜血需求。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img width="150" height="150" alt="" src="../../../static/img/movie_img/siji.jpeg"/>
+            <div class="caption">
+                <a target="_blank"  href="">《死寂》</a>
+                <p>
+                    本片讲述了一个备受折磨的故事，来自于一个只存在于想象中的死去很久的祖先以及古老的咒怨。
+                </p>
+            </div>
+        </div>
+    </div>
+           <div class="bottom">
+        <p>
+            &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+        </p>
+    </div>
+
+</div>
+
+
+</body>
+</html>

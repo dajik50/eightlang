@@ -1,0 +1,241 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.content_top {
+    background: url("../../img/movie_img/4.jpg");
+    background-size: 100%;
+}
+
+.total {
+    background: url("../../img/movie_img/tupian.jpg");
+    background-size: 100%;
+}
+
+
+.top {
+    height: 50px;
+    width: 100%;
+    top: 10px;
+    background: #727272;
+}
+
+.top li {
+    float: left;
+    padding-top: 12px;
+    list-style-type: none;
+}
+
+.top .top2 {
+    position: relative;
+    padding-left: 90%;
+}
+
+.top .top1 li {
+    margin-right: 50px;
+}
+
+.top .top2 li {
+    margin-right: 20px;
+}
+
+.top li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.top li a:hover {
+    color: pink;
+}
+
+.total {
+    margin: 0;
+    padding: 0;
+}
+
+.img3 {
+    width: 500px;
+    height: 250px;
+    /*transition: all 1.2s ease-in-out;*/
+}
+
+.img3:hover {
+    opacity: 0.3;
+    /*transform: rotate(360deg) scale(1.1, 1.1);*/
+}
+
+#img2 {
+    padding: 0 8%;
+    clear: both;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+#img2 a:hover {
+    /*display: block;*/
+    background-color: white;
+}
+
+#tb {
+    margin-left: 150px;
+}
+
+#tb tr td {
+    color: lemonchiffon;
+    font-size: 20px;
+}
+
+.btn1 {
+    margin-left: 150px;
+}
+
+#btn2 {
+    background-color: white;
+}
+
+#btn2:hover {
+    background-color: blue;
+}
+
+
+.btn1 tr td {
+    color: white;
+}
+
+#btn2 {
+    font-size: 20px;
+    margin-left: 750px;
+}
+
+.liuyan {
+    margin-left: 700px;
+    font-size: 20px;
+    color: #cccccc;
+}
+
+.liuyan3 {
+    margin-left: -10px;
+}
+
+#liuyan1 {
+    font-size: 30px;
+    text-decoration: none;
+    color: #cccc;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+#liuyan1:hover {
+    background-color: blanchedalmond;
+}
+
+#eur {
+    display: none;
+}
+
+#spa {
+    display: none;
+}
+
+#ini {
+    display: none;
+}
+
+.content_top {
+    width: 465px;
+    height: 100%;
+    float: right;
+    position: relative;
+    border: 1px solid;
+    margin-right: 760px;
+    margin-top: 30px;
+    border-radius: 30px 30px 30px 30px;
+
+}
+
+.content_top ul li {
+    float: left;
+    /* padding: 40px; */
+    list-style-type: none;
+}
+
+.team_name {
+    float: left;
+    font-size: 20px;
+    /* margin-top: 2px; */
+}
+
+.button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    /* height: 10px; */
+    padding: 25px 51px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 25px;
+    margin: 3px 1px;
+    cursor: pointer;
+
+    border-radius: 30px 30px 30px 30px;
+}
+
+.top_name {
+
+    float: left;
+    /* width: 100%; */
+
+}
+
+.top_name ul {
+    margin-left: 75px;
+    /* margin: auto; */
+
+}
+
+.button1 {
+    background-color: #727272;
+    padding: 3px 30px;
+    margin: 2px;
+    color: white;
+    font-size: 20px;
+    margin-top: 5px;
+    border: none;
+
+}
+
+.top_list {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+.top_list1 {
+    float: left;
+    width: 33.3%;
+    height: 100%;
+
+}
+
+.top_list1 ol {
+    margin-left: 60px;
+    color: white;
+}
+
+/*---底部栏---*/
+.bottom {
+    margin-top: 20%;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    z-index: 1;
+}
+
+.bottom p {
+    font-size: 15px;
+    color: #cccccc;
+}

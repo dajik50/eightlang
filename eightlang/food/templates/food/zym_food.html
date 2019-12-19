@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美食做法</title>
+    <link rel="stylesheet" href="../../../static/css/food_css/index.css" type="text/css">
+    <style>
+        #err {
+            font-size: 25px;
+            color: red;
+            position: absolute;
+            left: 500px;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">
+     <div>
+        <ul id="nav">
+            <li><a target="_blank"  href="/food/kind?name=川菜" title="川菜">川菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=鲁菜" title="鲁菜">鲁菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=粤菜" title="粤菜">粤菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=苏菜" title="苏菜">苏菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=浙菜" title="浙菜">浙菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=闽菜" title="闽菜">闽菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=湘菜" title="湘菜">湘菜</a></li>
+            <li><a target="_blank"  href="/food/kind?name=徽菜" title="徽菜">徽菜</a></li>
+            <li><form action="/food/search" method="post">
+                    {% csrf_token %}
+                    <input type="search" placeholder="请输入菜名"  name="search">
+	                <button type="submit">搜索</button>
+                </form></li>
+            <li><a target="_blank"  href="/food/index" title="首页">首页</a></li>
+            <li><a target="_blank"  href="/person" title="个人中心">个人中心</a></li>
+            <li><a target="_blank"  href="/abus" title="关于我们">关于我们</a></li>
+            <li><a target="_blank"  href="/food/liuyan">留言区</a></li>
+            <li><a target="_blank"  href="/logreg/log" >登录</a></li>
+            <li><a target="_blank"  href="/logreg/reg" >注册</a></li>
+            <li><a target="_blank"  href="/quit" >注销</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    {% if tmp %}
+    {% for item in food %}
+    <img src="../../../static/img/food_img/{{ item.food_kind }}image/{{ item.image_name }}" alt="" id="d4">
+        <br>
+        <span id="s9">食材明细</span>
+
+    <br>
+
+        <span id="s10">1.主料：{{ item.main_meal }}</span>
+
+    <br>
+        <span id="s11">2.辅料：{{ item.assist_meal }}</span>
+    <br>
+        <span id="s12">3.其他：{{ item.others }}</span>
+    <div></div>
+    <div id="d5">{{ item.name }}具体做法：</div>
+    <div id="d6">
+        <div>{{ item.food_method }}</div>
+    {% endfor %}
+    {% else %}
+        <p id="err"><a target="_blank"  href="/food/index">{{ err }}(点此返回主页面)</a></p>
+    {% endif %}
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+</div>
+
+</body>
+</html>

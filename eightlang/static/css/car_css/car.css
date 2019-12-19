@@ -1,0 +1,247 @@
+a {
+    text-decoration: none;
+    color: #0000FF;
+}
+
+body {
+    background-color: #ccc;
+    background-image: url("../../img/car_bk_img.jpg");
+}
+
+/*导航栏样式*/
+.top {
+    width: 100%;
+    background-color: dodgerblue;
+    color: #fff;
+    top: 0;
+}
+
+.top #con {
+    width: 1400px;
+    margin: 0 auto;
+    height: 80px;
+    line-height: 80px;
+}
+
+.top #con #wel {
+    float: left;
+    font-size: 28px;
+    margin-right: 80px;
+}
+
+.top #con ul {
+    float: left;
+    margin-top: 0;
+}
+
+.top ul li {
+    list-style: none;
+    float: left;
+    width: 120px;
+}
+
+.top ul li a {
+    margin-right: 20px;
+    color: black;
+    font-size: 20px;
+
+}
+
+.top #con #log a {
+    float: right;
+}
+
+
+/*--- 导航图 ---*/
+#car_img {
+    position: relative;
+    width: 1400px;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#car_img img {
+    width: 1398px;
+    height: 597px;
+}
+
+
+/*--- 中部内容 ---*/
+#middle {
+    overflow: hidden;
+    width: 1398px;
+    margin: 20px auto;
+}
+
+
+/*--- 中部-左 ---*/
+#middle #left {
+    position: relative;
+    width: 500px;
+    float: left;
+}
+
+/*--- 中部-左上 ---*/
+#middle #left #left_top {
+
+    background-color: darkgray;
+    overflow: hidden;
+}
+
+#middle #left #left_top #touxiang {
+    float: left;
+}
+
+#middle #left #left_top #touxiang img {
+    width: 200px;
+    height: 200px;
+}
+
+#middle #left #left_top #touxiang p {
+    text-align: center;
+}
+
+#middle #left #left_top #xiangqing {
+    float: right;
+    margin-top: 50px;
+    margin-right: 80px;
+    width: 200px;
+}
+
+#middle #left #left_top #xiangqing p {
+    width: 250px;
+}
+
+
+/*--- 中部-左下 ---*/
+#middle #left #left_bottom {
+    background-color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#middle #left #left_bottom p {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+#middle #left #left_bottom .love {
+    height: 350px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#middle #left #left_bottom .love-img {
+    width: 100%;
+    height: 350px;
+
+}
+
+#middle #left #left_bottom img {
+    width: 400px;
+    height: 300px;
+}
+
+
+#middle #left #left_bottom .love-title {
+    margin-bottom: 100px;
+}
+
+
+/*--- 中部-右 ---*/
+#middle #right {
+    position: relative;
+    width: 800px;
+    float: right;
+    border: solid 1px gray;
+    background-color: #61420f;
+}
+
+#middle #right img {
+    width: 350px;
+    height: 400px;
+}
+/*--- 右-保时捷标志 ---*/
+#middle #right #right_navigation {
+    width: 100%;
+    height: 400px;
+}
+
+#middle #right #bsj_car {
+    float: left;
+    width: 350px;
+    height: 400px;
+}
+
+#middle #right #car_sign_describe {
+    float: left;
+    width: 400px;
+}
+
+/*--- 右-上 ---*/
+#middle #right #right_top {
+    width: 100%;
+    height: 400px;
+}
+
+#middle #right #car_top {
+    float: left;
+    width: 350px;
+    height: 390px;
+}
+
+#middle #right #desc_top {
+    float: left;
+    width: 400px;
+}
+/*--- 右-中 ---*/
+#middle #right #right_mid {
+    width: 100%;
+    height: 400px;
+}
+
+#middle #right #car_mid {
+    float: left;
+    width: 350px;
+    height: 400px;
+}
+
+#middle #right #desc_mid {
+    float: left;
+    width: 400px;
+}
+
+/*--- 右-下 ---*/
+#middle #right #right_bottom {
+    width: 100%;
+    height: 400px;
+}
+
+#middle #right #car_bottom {
+    float: left;
+    width: 350px;
+    height: 400px;
+}
+
+#middle #right #desc_bottom {
+    float: left;
+    width: 400px;
+}
+
+
+/*---底部栏---*/
+.bottom {
+    margin-top: 100px;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+
+.bottom p {
+    font-size: 12px;
+}

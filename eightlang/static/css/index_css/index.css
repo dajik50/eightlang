@@ -1,0 +1,178 @@
+body {
+    background-color: lightgray;
+    min-width: 1366px;
+    padding-top: 30px;
+}
+
+/*---超链接取消下划线---*/
+body a {
+    text-decoration: none;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*  清楚浮动*/
+.clear:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+/*---标题栏---*/
+.top {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+    width: 1366px;
+    margin: 0 auto 50px;
+}
+
+.top #sign {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+
+.top img {
+    width: 180px;
+    height: 70px;
+    float: left;
+}
+
+.top #welcome {
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.top #logging {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#q1:hover {
+    font-size: 30px;
+    color: black;
+}
+
+#logging a {
+    color: #444444;
+    font-size: 30px;
+    text-decoration: underline !important;
+}
+
+
+/*---导航图片---*/
+.display {
+    position: relative;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+.display hr{
+    width: 100%;
+    margin-top: 5px;
+}
+.display #ds_construction{
+    float: left;
+}
+
+.display img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px 10px;
+    opacity: 0.65;
+}
+.display #ds_construction div{
+    width: 800px;
+}
+.display #ds_construction span{
+    position: absolute;
+    color: gray;
+    float: right;
+    margin-top: 19%;
+    padding-left: 45%;
+}
+
+.display #ds_bottom {
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+}
+
+
+
+/*----首页内容----*/
+.content {
+    position: relative;
+    text-align: center;
+}
+
+.content #good1 {
+
+}
+
+.content button {
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.content #good1 div img {
+    height: 100px;
+    width: 100px;
+}
+
+#today {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.content div h1 {
+    /*width: 1366px;*/
+    text-align: left;
+    margin: 30px 30px 0;
+    float: left;
+    vertical-align: middle;
+}
+
+#nice {
+    float: left;
+    /*width: 1366px;*/
+    padding-left: 50px;
+    box-sizing: border-box;
+    text-align: left;
+    vertical-align: middle;
+
+}
+
+
+
+
+/*---底部栏---*/
+.bottom {
+    margin-top: 100px;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+
+.bottom p {
+    font-size: 12px;
+}

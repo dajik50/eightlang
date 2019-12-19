@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eightlang影视分区</title>
+    <link rel="stylesheet" href="../../../static/css/movie_css/blog.css">
+    <script>
+        // 		var eur = document.getElementByClassName("eur");
+        // 		var spa = document.getElementByClassName("spa");
+        // 		var ini = document.getElementByClassName("ini");
+
+        function eur() {
+            document.getElementById("spa").style.display = "none";
+            document.getElementById("ini").style.display = "none";
+            document.getElementById("eur").style.display = "inline";
+        }
+
+        function spa() {
+            document.getElementById("eur").style.display = "none";
+            document.getElementById("ini").style.display = "none";
+            document.getElementById("spa").style.display = "inline";
+        }
+
+        function ini() {
+            document.getElementById("spa").style.display = "none";
+            document.getElementById("eur").style.display = "none";
+            document.getElementById("ini").style.display = "inline";
+        }
+    </script>
+</head>
+<body class="total">
+<div class="top">
+    <ul class="top1">
+        <li><a target="_blank"  href="/">首页</a></li>
+        <li><a target="_blank"  href="/person">个人中心</a></li>
+        <li><a target="_blank"  href="/abus">关于我们</a></li>
+        <li><a target="_blank"  href="/person">{{nickname}}</a></li>
+        <li><a target="_blank"  href="/movie/liuyan">留言区</a></li>
+    </ul>
+    <ul class="top2">
+        <li><a target="_blank"  href="/logreg/log">登录</a></li>
+        <li><a target="_blank"  href="/logereg/reg">注册</a></li>
+        <li><a target="_blank"  href="/quit">注销</a></li>
+    </ul>
+</div>
+<div id="img2">
+    <div>
+        <a target="_blank"  href="/movie/love"><img class='img3' src="../../../static/img/movie_img/aiqing.jpeg" alt="" title="爱情电影"></a>
+        <a target="_blank"  href="/movie/dongman"><img class='img3' src="../../../static/img/movie_img/dongman.jpg" alt="" title="动漫电影"></a>
+        <a target="_blank"  href="/movie/kehuan"><img class='img3' src="../../../static/img/movie_img/kehuan.jpg" alt=""
+                                            title="科幻电影"></a>
+    </div>
+    <div>
+        <a target="_blank"  href="/movie/terror"><img class='img3' src="../../../static/img/movie_img/jinsong.jpeg" alt="" title="恐怖电影"></a>
+        <a target="_blank"  href="/movie/warfare"><img class='img3' src="../../../static/img/movie_img/zhanzheng.jpg" alt="" title="战争电影"></a>
+        <a target="_blank"  href="/movie/youth"><img class='img3' src="../../../static/img/movie_img/qingchun.jpeg" alt="" title="青春电影"></a>
+    </div>
+</div>
+
+<div>
+    <div class="content_top">
+        <div class="team_name">
+            <ul>
+                <li>
+                    <button type="button" class="button eur" onclick="eur()">大陆</button>
+                </li>
+                <li>
+                    <button type="button" class="button spa" onclick="spa()">日韩</button>
+                </li>
+                <li>
+                    <button type="button" class="button ini" onclick="ini()">欧美</button>
+                </li>
+            </ul>
+        </div>
+        <div class="top_name">
+            <ul>
+                <li class="button1">日榜</li>
+                <li class="button1">周榜</li>
+                <li class="button1">月榜</li>
+            </ul>
+        </div>
+        <div class="top_list" id="eur">
+            <div class="top_list1">
+                <ol>
+                    <li>少年的你</li>
+                    <li>地久天长</li>
+                    <li>送我上青云</li>
+                    <li>我不是药神</li>
+                    <li>流浪地球</li>
+                    <li>猫妖传</li>
+                    <li>夏洛特烦恼</li>
+                    <li>红海行动</li>
+                    <li>过韶关</li>
+                    <li>无名之辈</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>江湖儿女</li>
+                    <li>战狼</li>
+                    <li>动物世界</li>
+                    <li>兰心大剧院</li>
+                    <li>无问东西</li>
+                    <li>乘风破浪</li>
+                    <li>喜欢你</li>
+                    <li>爆裂无声</li>
+                    <li>芳华</li>
+                    <li>嘉年华</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>夏洛特烦恼</li>
+                    <li>找到你</li>
+                    <li>阿甘正传</li>
+                    <li>罗小黑战纪</li>
+                    <li>快把我哥带走</li>
+                    <li>记忆大师</li>
+                    <li>分手大师</li>
+                    <li>一出好戏</li>
+                    <li>无双</li>
+                    <li>超时空同居</li>
+                </ol>
+            </div>
+        </div>
+        <div class="top_list" id="spa">
+            <div class="top_list1">
+                <ol>
+                    <li>寄生虫</li>
+                    <li>天气之子</li>
+                    <li>千与千寻</li>
+                    <li>蜂鸟</li>
+                    <li>小偷家族</li>
+                    <li>龙猫</li>
+                    <li>犯罪都市</li>
+                    <li>燃烧</li>
+                    <li>特工</li>
+                    <li>青年警察</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>铁雨</li>
+                    <li>极限职工</li>
+                    <li>海兽之子</li>
+                    <li>声之形</li>
+                    <li>花牌情缘</li>
+                    <li>我的一级兄弟</li>
+                    <li>与我跳舞</li>
+                    <li>王者</li>
+                    <li>南汉山城</li>
+                    <li>军舰岛</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>爸爸是女儿</li>
+                    <li>陪审员</li>
+                    <li>千子</li>
+                    <li>我能说</li>
+                    <li>深夜食堂</li>
+                    <li>我能说</li>
+                    <li>之后</li>
+                    <li>小森林</li>
+                    <li>银魂</li>
+                    <li>态度娃娃</li>
+                </ol>
+            </div>
+        </div>
+        <div class="top_list" id="ini">
+            <div class="top_list1">
+                <ol>
+                    <li>小丑</li>
+                    <li>爱尔兰人</li>
+                    <li>海上钢琴师</li>
+                    <li>利刃出鞘</li>
+                    <li>杀手不太冷</li>
+                    <li>第一滴血</li>
+                    <li>天才少女</li>
+                    <li>绿皮书</li>
+                    <li>急速车王</li>
+                    <li>安娜</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>急速备战</li>
+                    <li>钢铁侠</li>
+                    <li>小丑回魂</li>
+                    <li>完美陌生人</li>
+                    <li>奇迹男孩</li>
+                    <li>别告诉他</li>
+                    <li>官方机密</li>
+                    <li>海王</li>
+                    <li>金刚</li>
+                    <li>侏罗纪公园</li>
+                </ol>
+            </div>
+            <div class="top_list1">
+                <ol>
+                    <li>侏罗纪世界</li>
+                    <li>爱乐之城</li>
+                    <li>婚姻故事</li>
+                    <li>生化危机</li>
+                    <li>一个小忙</li>
+                    <li>星球大战</li>
+                    <li>雪人奇缘</li>
+                    <li>狼嚎</li>
+                    <li>黑夜传说</li>
+                    <li>暮光之城</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="bottom">
+    <hr>
+    <p>
+        &copy;2019八浪。网站图标所有权归本网站所有，任何机构或个人不得随意使用。商务合作请电话联系:189825xxx82
+    </p>
+</div>
+</body>
+</html>
